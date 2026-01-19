@@ -8,7 +8,13 @@ export const tailwindTheme = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        xs: '375px',
+        sm: '576px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
+        '3xl': '1920px',
       },
     },
     extend: {
