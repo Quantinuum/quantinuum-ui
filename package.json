@@ -18,7 +18,7 @@
     "branches": [
       "main",
       {
-       "name": "fix-move-deps",
+        "name": "fix-move-deps",
         "prerelease": true
       }
     ]
@@ -45,13 +45,13 @@
   "mode": "production",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CQCL/quantinuum-ui.git"
+    "url": "git+https://github.com/Quantinuum/quantinuum-ui.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CQCL/quantinuum-ui/issues"
+    "url": "https://github.com/Quantinuum/quantinuum-ui/issues"
   },
-  "homepage": "https://github.com/CQCL/quantinuum-ui#readme",
+  "homepage": "https://github.com/Quantinuum/quantinuum-ui#readme",
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.1",
     "@rollup/plugin-commonjs": "^22.0.0",
