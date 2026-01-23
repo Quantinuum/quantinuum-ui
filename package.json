@@ -18,7 +18,7 @@
     "branches": [
       "main",
       {
-        "name": "fix-move-deps",
+        "name": "fix-lock-file",
         "prerelease": true
       }
     ]
