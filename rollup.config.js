@@ -27,6 +27,7 @@ export default [{
       sourcemap: true,
     },
   ],
+  external: [/node_modules/],
   plugins: [
     peerDepsExternal(),
     resolve(),
