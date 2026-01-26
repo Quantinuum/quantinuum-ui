@@ -26,7 +26,10 @@ export default [{
       sourcemap: true,
     },
   ],
-  external: [/node_modules/],
+  external: (id) => {
+    // External: node_modules packages (but not our own source)
+    return /node_modules/.test(id) && !/^\./.test(id) && !/^\//.test(id.replace(/^[A-Z]:/, ''));
+  },
   plugins: [
     peerDepsExternal(),
     resolve(),
