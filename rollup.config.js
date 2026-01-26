@@ -29,10 +29,7 @@ export default [{
   external: [/node_modules/],
   plugins: [
     peerDepsExternal(),
-    resolve({
-      preferBuiltins: false,
-      resolveOnly: [/^\.{0,2}\//],
-    }),
+    resolve(),
     commonjs(),
     typescript({
       tsconfig: "./tsconfig.json",
