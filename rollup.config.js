@@ -2,6 +2,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import terser from '@rollup/plugin-terser';
 import typescript from "@rollup/plugin-typescript";
+import path from 'path';
 import copy from "rollup-plugin-copy";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import preserveDirectives from "rollup-plugin-preserve-directives";
@@ -27,12 +28,24 @@ export default [{
     },
   ],
   external: (id) => {
-    // External: node_modules packages (but not our own source)
-    return /node_modules/.test(id) && !/^\./.test(id) && !/^\//.test(id.replace(/^[A-Z]:/, ''));
+    // Don't mark entry points or relative/absolute source paths as external
+    if (id.startsWith('.') || id.startsWith('/') || id.includes('src/')) {
+      return false;
+    }
+
+    // Don't mark "src" alias as external
+    if (id === 'src') {
+      return false;
+    }
+    // Mark all other bare module names (like 'react', 'tslib') as external
+    return true;
   },
   plugins: [
-    peerDepsExternal(),
-    resolve(),
+    resolve({
+      alias: {
+        'src': path.resolve('./src')
+      }
+    }),
     commonjs(),
     typescript({
       tsconfig: "./tsconfig.json",
