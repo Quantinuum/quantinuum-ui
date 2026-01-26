@@ -6,18 +6,16 @@ import copy from "rollup-plugin-copy";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import preserveDirectives from "rollup-plugin-preserve-directives";
 
-
- function onwarn(warning, warn) {
-    if (
-      warning.code === "MODULE_LEVEL_DIRECTIVE" &&
-      warning.message.includes(`'use client'`)
-    ) {
-      return;
-    }
-    warn(warning);
+function onwarn(warning, warn) {
+  // Rollup does not understand 'use client' or other NextJS directives, so it throws. It is common though for Radix UI/Shadcn etc. libraries to ship ESM with these directives.
+  if (warning.code === 'MODULE_LEVEL_DIRECTIVE' && /use client/.test(warning.message)) {
+    return;
   }
+  warn(warning);
+}
+
 export default [{
- onwarn,
+  onwarn,
   input: "src/index.ts",
   output: [
     {
@@ -47,6 +45,7 @@ export default [{
   ],
 
 }, {
+  onwarn,
   input: "src/utils/syncTheme.ts",
   output: [
     {
