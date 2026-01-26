@@ -7,7 +7,8 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import preserveDirectives from "rollup-plugin-preserve-directives";
 
 function onwarn(warning, warn) {
-  // Rollup does not understand 'use client' or other NextJS directives, so it throws. It is common though for Radix UI/Shadcn etc. libraries to ship ESM with these directives.
+  // Rollup doesn’t recognize 'use client' or other Next.js directives, which can cause errors. Many libraries, including Radix UI and Shadcn UI, distribute ESM modules that include these directives.
+
   if (warning.code === 'MODULE_LEVEL_DIRECTIVE' && /use client/.test(warning.message)) {
     return;
   }
