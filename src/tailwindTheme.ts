@@ -6,16 +6,19 @@ export const tailwindTheme = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: '2rem',
       screens: {
-        xs: '375px',
-        sm: '576px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
-        '2xl': '1536px',
-        '3xl': '1920px',
+        '2xl': '1400px', // In order to be backward compatible with previous max-width for 2xl we set it to 1400px. All containers will have a max width of 1400px at 2xl screens and above
       },
+    },
+    screens: { // Overriding default breakpoints - We want to replace rather than extend - all the breakpoints must be clearly defined here
+      xs: '375px',
+      sm: '576px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+      '3xl': '1920px',
     },
     extend: {
       colors: {
