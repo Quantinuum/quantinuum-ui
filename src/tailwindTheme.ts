@@ -8,7 +8,7 @@ export const tailwindTheme = {
       center: true,
       padding: '2rem',
       screens: {
-        '2xl': '1400px', // In order to be backward compatible with previous max-width for 2xl we set it to 1400px. All containers will have a max width of 1400px at 2xl screens and above
+        'large-laptop': '1400px', // Above 1400px wide screens set containers to have a max-width of 1400px
       },
     },
     screens: { // Overriding default breakpoints - We want to replace rather than extend - all the breakpoints must be clearly defined here
