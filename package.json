@@ -18,8 +18,8 @@
     "branches": [
       "main",
       {
-        "name": "fix-move-deps",
-        "prerelease": true
+        "name": "new-breakpoints",
+        "prerelease": false
       }
     ]
   },
