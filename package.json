@@ -19,7 +19,7 @@
       "main",
       {
         "name": "new-breakpoints",
-        "prerelease": true
+        "prerelease": false
       }
     ]
   },
