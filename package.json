@@ -16,11 +16,7 @@
   },
   "release": {
     "branches": [
-      "main",
-      {
-        "name": "fix-lock-file",
-        "prerelease": true
-      }
+      "main"
     ]
   },
   "publishConfig": {
