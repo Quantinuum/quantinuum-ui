@@ -22,9 +22,9 @@ const ExactMatch = () => {
             size="icon"
             variant="ghost"
             onClick={() => setIsActive(!isActive)}
-            className={`p-0 rounded-none hover:cursor-pointer text-muted-foreground [&_svg]:size-6 size-6 ${isActive ? "[&_svg]:hover:fill-muted-foreground/70" : ""}`}
+            className={`p-0 rounded-none hover:cursor-pointer text-muted-foreground [&_svg]:size-6 size-6 ${isActive ? "[&_svg]:hover:fill-muted-foreground/70 dark:[&_svg]:hover:fill-foreground/70" : ""}`}
           >
-            <ExactMatchIcon className={isActive ? "fill-muted-foreground text-background" : ""}/>
+            <ExactMatchIcon className={isActive ? "fill-muted-foreground text-background dark:fill-foreground" : ""}/>
           </Button>
         </TooltipTrigger>
         <TooltipContent>
