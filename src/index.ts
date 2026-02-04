@@ -17,6 +17,7 @@ export * from "./shadcn/ui/dropdown-menu";
 export * from "./shadcn/ui/form";
 export * from "./shadcn/ui/hover-card";
 export * from "./shadcn/ui/input";
+export * from "./shadcn/ui/input-group";
 export * from "./shadcn/ui/input-otp";
 export * from "./shadcn/ui/label";
 export * from "./shadcn/ui/navigation-menu";
