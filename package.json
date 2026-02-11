@@ -16,7 +16,11 @@
   },
   "release": {
     "branches": [
-      "main"
+      "main",
+      {
+        "name": "release-input-group",
+        "prerelease": true
+      }
     ]
   },
   "publishConfig": {
