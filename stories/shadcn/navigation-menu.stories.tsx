@@ -3,7 +3,7 @@
 import * as React from "react";
 // import Link from "next/link"
 
-import { cn } from "src/utils";
+import { cn } from "../../src/utils/cn";
 
 import { IconJarLogoIcon } from "@radix-ui/react-icons";
 import {

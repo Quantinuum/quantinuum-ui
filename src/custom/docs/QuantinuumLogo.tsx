@@ -1,5 +1,5 @@
 import { ComponentProps } from "react"
-import { cn } from "src"
+import { cn } from "../../utils/cn"
 
 export const QuantinuumLogo = (props: ComponentProps<'svg'>) => {
     return (

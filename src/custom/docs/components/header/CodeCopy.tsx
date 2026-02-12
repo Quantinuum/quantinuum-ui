@@ -1,8 +1,9 @@
 'use client'
 import React from "react"
 
-import {Button, cn} from 'src'
 import { Check, Copy } from "lucide-react"
+import { Button } from 'src'
+import { cn } from '../../../../utils/cn'
 export const CodeCopy = (props: {textToCopy: string, className?: string}) => {
 
     const [copied, setHasCopied] = React.useState(false)

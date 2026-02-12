@@ -1,4 +1,4 @@
-import { cn } from "src"
+import { cn } from "../utils/cn"
 
 export const StatusIconSuccess = (props: { className?: string }) => {
 

@@ -1,6 +1,6 @@
 
-import { cn } from 'src'
 import React from 'react'
+import { cn } from '../../../../utils/cn'
 import { CodeCopy } from './CodeCopy'
 
 const DocsHeaderTitle = React.forwardRef<
@@ -67,4 +67,5 @@ DocsHeaderWrapper.displayName = 'DocsHeaderWrapper'
 
 
 
-export {DocsHeaderWrapper, DocsHeaderRight, DocsHeaderLeft, DocsHeaderTitle, DocsHeaderSubtitle, CodeCopy}
+export { CodeCopy, DocsHeaderLeft, DocsHeaderRight, DocsHeaderSubtitle, DocsHeaderTitle, DocsHeaderWrapper }
+

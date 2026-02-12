@@ -1,6 +1,5 @@
-import { LucideIcon } from 'lucide-react'
 import React from 'react'
-import { cn } from 'src'
+import { cn } from '../../../../utils/cn'
 
 const CardTitle = React.forwardRef<
   HTMLParagraphElement,
@@ -68,4 +67,5 @@ const IconBar = React.forwardRef<
 })
 IconBar.displayName = 'IconBar'
 
-export { Card, CardTitle, CardSubtitle }
+export { Card, CardSubtitle, CardTitle }
+

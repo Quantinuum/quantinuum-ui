@@ -1,5 +1,5 @@
 import React from "react"
-import { cn } from "src/utils"
+import { cn } from "../../utils/cn"
 
 const Skeleton = React.forwardRef<HTMLDivElement, React.ComponentProps<"div">>(({className, ...props}, ref) => {
   return <div
