@@ -2,7 +2,7 @@
 import React from "react"
 
 import { Check, Copy } from "lucide-react"
-import { Button } from 'src'
+import { Button } from 'shadcn/ui/button'
 import { cn } from '../../../../utils/cn'
 export const CodeCopy = (props: {textToCopy: string, className?: string}) => {
 

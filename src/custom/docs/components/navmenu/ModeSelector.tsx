@@ -1,14 +1,12 @@
 
 import { Check, MoonIcon, SunIcon } from 'lucide-react'
+import { Button } from 'shadcn/ui/button'
 import {
-  Button,
-  DropdownMenu,
-  DropdownMenuContent,
+  DropdownMenu, DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-
-  useTheme,
-} from 'src'
+} from 'shadcn/ui/dropdown-menu'
+import { useTheme } from '../../../theme-selector'
 
 export const ModeSelector = () => {
   const theme = useTheme()

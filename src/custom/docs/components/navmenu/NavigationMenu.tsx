@@ -1,12 +1,12 @@
 
 import {
   NavigationMenu,
+  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
-  NavigationMenuTrigger,
   NavigationMenuList,
-  NavigationMenuContent,
-} from 'src'
+  NavigationMenuTrigger,
+} from 'shadcn/ui/navigation-menu';
 
 
 export const Navigation = (props: {

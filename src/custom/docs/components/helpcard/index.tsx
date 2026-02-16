@@ -1,7 +1,6 @@
-import { CardTitle  } from '../triplecard/Card'
 import { LucideIcon } from "lucide-react"
-import { CardHeader, CardDescription } from "src"
-import { Card } from 'src'
+import { Card, CardDescription, CardHeader } from "shadcn/ui/card"
+import { CardTitle } from '../triplecard/Card'
 
 export const HelpCard = (props: {
     columns: {
@@ -22,7 +21,6 @@ export const HelpCard = (props: {
               <CardTitle className="text-[1rem] font-semibold inline-block">{item.title}</CardTitle>
               <CardDescription>{item.description}</CardDescription>
           </CardHeader>
-        
         </Card>
         </a>
         );

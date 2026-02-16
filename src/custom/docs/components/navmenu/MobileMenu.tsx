@@ -1,13 +1,8 @@
 
 
-import {
-    Button,
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-  } from "src"
-import { MenuIcon } from "lucide-react"
+import { MenuIcon } from 'lucide-react';
+import { Button } from 'shadcn/ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from 'shadcn/ui/dropdown-menu';
 
   export const MobileMenu = (props: {
     navTextLinks: {
@@ -17,7 +12,7 @@ import { MenuIcon } from "lucide-react"
       description: string,
       dropDown: {
         href: string,
-        title: string, 
+        title: string,
       }[],
     }[];
   }) => {

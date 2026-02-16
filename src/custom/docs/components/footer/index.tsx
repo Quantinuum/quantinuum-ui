@@ -1,5 +1,5 @@
+import { Separator } from "shadcn/ui/separator";
 import { QuantinuumLogo } from "../../QuantinuumLogo";
-import { Separator } from "src";
 
 const footerConfig = {
   columns: [

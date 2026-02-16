@@ -1,14 +1,11 @@
 'use client'
-import { Navigation } from './NavigationMenu'
-import { QuantinuumLogo } from './QuantinuumLogo'
-import { MobileMenu } from './MobileMenu'
-import { QuantinuumIdent } from './QuantinuumIdent'
-import { ModeSelector } from './ModeSelector'
-import React from 'react'
-import { SystemsLogo } from '../logos/SystemsLogo'
 import { NexusLogo } from '../logos/NexusLogo'
-import { InquantoLogo } from '../logos/InQuantoLogo'
-import { LambeqLogo } from '../logos/LambeqLogo'
+import { SystemsLogo } from '../logos/SystemsLogo'
+import { MobileMenu } from './MobileMenu'
+import { ModeSelector } from './ModeSelector'
+import { Navigation } from './NavigationMenu'
+import { QuantinuumIdent } from './QuantinuumIdent'
+import { QuantinuumLogo } from './QuantinuumLogo'
 
 const navConfig = {
   navTextLinks: [
