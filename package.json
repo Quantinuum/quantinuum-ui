@@ -12,7 +12,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "rm -rf ./dist && rollup -c && storybook build && cp ./dist/src/utils/syncTheme.js ./storybook-static/syncTheme.js",
     "lint": "tsc && eslint src",
-    "build": "rm -rf ./dist && rollup -c"
+    "build": "rm -rf ./dist && rollup -c",
+    "prepare": "husky"
   },
   "release": {
     "branches": [
@@ -71,6 +72,7 @@
     "eslint": "^9.39.2",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
+    "husky": "^9.1.7",
     "postcss": "^8.4.32",
     "prop-types": "^15.8.1",
     "rollup": "^2.79.2",
