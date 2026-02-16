@@ -3,6 +3,9 @@
   "include": ["**/*.ts", "**/*.tsx"],
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "shadcn/ui/*": ["src/shadcn/ui/*"],
+    },
     "target": "es2016",
     "strict": true,
     "noImplicitAny": true,

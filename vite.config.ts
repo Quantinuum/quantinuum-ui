@@ -6,6 +6,7 @@ export default defineConfig({
   resolve: {
     alias: {
       src: "/src",
+      "shadcn/ui": "/src/shadcn/ui",
     },
   },
 });
