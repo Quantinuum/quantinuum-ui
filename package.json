@@ -19,7 +19,7 @@
     "branches": [
       "main",
       {
-        "name": "release-input-group",
+        "name": "NRP-2803-fix-circular-dependencies",
         "prerelease": true
       }
     ]
