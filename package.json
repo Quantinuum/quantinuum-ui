@@ -21,6 +21,10 @@
       {
         "name": "NRP-2803-fix-circular-dependencies",
         "prerelease": true
+      },
+      {
+        "name": "fix/update-radix",
+        "prerelease": true
       }
     ]
   },
