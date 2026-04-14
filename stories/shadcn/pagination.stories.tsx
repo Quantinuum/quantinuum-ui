@@ -6,31 +6,31 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "src/shadcn/ui/pagination";
+} from "../../src";
   
   export function PaginationDemo() {
     return (
       <Pagination>
         <PaginationContent>
           <PaginationItem>
-            <PaginationPrevious href="#" />
+            <PaginationPrevious  href="#" />
           </PaginationItem>
           <PaginationItem>
             <PaginationLink href="#">1</PaginationLink>
           </PaginationItem>
           <PaginationItem>
-            <PaginationLink href="#" isActive>
+            <PaginationLink  href="#" isActive>
               2
             </PaginationLink>
           </PaginationItem>
           <PaginationItem>
-            <PaginationLink href="#">3</PaginationLink>
+            <PaginationLink  href="#">3</PaginationLink>
           </PaginationItem>
           <PaginationItem>
             <PaginationEllipsis />
           </PaginationItem>
           <PaginationItem>
-            <PaginationNext href="#" />
+            <PaginationNext  href="#" />
           </PaginationItem>
         </PaginationContent>
       </Pagination>

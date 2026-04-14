@@ -8,7 +8,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger
-} from "src";
+} from "../../src";
 
 const Demo = (args: ComponentProps<typeof Sheet>) => {
   return (

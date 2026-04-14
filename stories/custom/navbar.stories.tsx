@@ -2,14 +2,14 @@ import { IconJarLogoIcon } from "@radix-ui/react-icons";
 import { Meta, StoryObj } from "@storybook/react-vite";
 import React from "react";
 import {
-  Button, cn, Input,
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger, navigationMenuTriggerStyle
-} from "src";
+    Button, cn, Input,
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger, navigationMenuTriggerStyle
+} from "../../src";
 
 const components: { title: string; href: string; description: string }[] = [
   {

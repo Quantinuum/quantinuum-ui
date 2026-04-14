@@ -1,21 +1,21 @@
 import {
-  CalendarIcon,
-  EnvelopeClosedIcon,
-  FaceIcon,
-  GearIcon,
-  PersonIcon,
-  RocketIcon,
+    CalendarIcon,
+    EnvelopeClosedIcon,
+    FaceIcon,
+    GearIcon,
+    PersonIcon,
+    RocketIcon,
 } from "@radix-ui/react-icons";
 import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-  CommandShortcut,
-} from "src";
+    Command,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+    CommandSeparator,
+    CommandShortcut,
+} from "../../src";
 
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
