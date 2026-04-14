@@ -125,7 +125,6 @@
     "@tailwindcss/typography": "^0.5.15",
     "@tanstack/react-table": "^8.11.0",
     "lucide-react": "^0.468.0",
-    "next": ">=13.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.50.1",
