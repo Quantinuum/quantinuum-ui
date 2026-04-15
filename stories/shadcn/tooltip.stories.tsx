@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from "@storybook/react-vite";
 import {
-  Button,
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "src";
+    Button,
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "../../src";
 function TooltipDemo() {
   return (
     <TooltipProvider>

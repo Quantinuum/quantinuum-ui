@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react-vite";
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "src";
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "../../src";
 function AccordionDemo() {
   return (
     <Accordion type="single" collapsible className="w-full">

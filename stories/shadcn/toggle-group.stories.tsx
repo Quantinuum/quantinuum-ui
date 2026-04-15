@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import {
-  FontBoldIcon,
-  FontItalicIcon,
-  UnderlineIcon,
+    FontBoldIcon,
+    FontItalicIcon,
+    UnderlineIcon,
 } from "@radix-ui/react-icons";
 
-import { ToggleGroup, ToggleGroupItem } from "src";
+import { ToggleGroup, ToggleGroupItem } from "../../src";
 
 const meta: Meta<typeof ToggleGroup> = {
   component: () => {

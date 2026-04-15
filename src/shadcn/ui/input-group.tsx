@@ -1,12 +1,12 @@
 "use client"
 
+import { cva, type VariantProps } from "class-variance-authority"
 import * as React from "react"
-import {cva, type VariantProps} from "class-variance-authority"
 
-import {cn} from "../../utils/cn"
-import {Button} from "src/shadcn/ui/button"
-import {Input, type InputProps} from "src/shadcn/ui/input"
-import {Textarea, type TextareaProps} from "src/shadcn/ui/textarea"
+import { Button } from "../../../src/shadcn/ui/button"
+import { Input, type InputProps } from "../../../src/shadcn/ui/input"
+import { Textarea, type TextareaProps } from "../../../src/shadcn/ui/textarea"
+import { cn } from "../../utils/cn"
 
 function InputGroup({className, ...props}: React.ComponentProps<"div">) {
   return (
@@ -165,8 +165,6 @@ InputGroupTextarea.displayName = "InputGroupTextarea"
 export {
   InputGroup,
   InputGroupAddon,
-  InputGroupButton,
-  InputGroupText,
-  InputGroupInput,
-  InputGroupTextarea,
+  InputGroupButton, InputGroupInput, InputGroupText, InputGroupTextarea
 }
+

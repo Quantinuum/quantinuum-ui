@@ -1,5 +1,5 @@
 import type { Meta } from "@storybook/react-vite";
-import { Checkbox } from "src";
+import { Checkbox } from "../../src";
 
 const CheckboxDemo = () => {
   return (

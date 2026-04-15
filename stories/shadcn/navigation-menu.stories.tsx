@@ -1,20 +1,19 @@
 "use client";
 
 import * as React from "react";
-// import Link from "next/link"
 
-import { cn } from "../../src/utils/cn";
+import { cn } from "../../src/";
 
 import { IconJarLogoIcon } from "@radix-ui/react-icons";
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle
-} from "src";
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+    navigationMenuTriggerStyle
+} from "../../src";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -166,7 +165,7 @@ const ListItem = React.forwardRef<
 ListItem.displayName = "ListItem";
 
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Button, Input } from "src";
+import { Button, Input } from "../../src";
 
 const meta: Meta<typeof NavigationMenuDemo> = {
   component: NavigationMenuDemo,

@@ -1,13 +1,13 @@
 import { CalendarIcon } from "@radix-ui/react-icons";
 import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-  Button,
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "src";
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+    Button,
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+} from "../../src";
 
 import type { Meta, StoryObj } from "@storybook/react-vite";
 const Demo = () => {
