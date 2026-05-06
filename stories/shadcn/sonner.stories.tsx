@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import React from "react";
-import { Button, SonnerToast } from "src";
-import * as sonner from 'sonner'
+import * as sonner from 'sonner';
+import { Button, SonnerToast } from "../../src";
 
 const SonnerDemo = (props: {defaultStyles: Boolean}) => {
     return props.defaultStyles ? (

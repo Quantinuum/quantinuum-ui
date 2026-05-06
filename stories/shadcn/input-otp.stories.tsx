@@ -3,7 +3,7 @@ import {
     InputOTPGroup,
     InputOTPSeparator,
     InputOTPSlot,
-  } from "src"
+} from "../../src";
   
   import type { Meta, StoryObj } from "@storybook/react-vite";
 

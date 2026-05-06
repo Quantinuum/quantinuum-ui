@@ -1,4 +1,5 @@
-import type {Meta, StoryObj} from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { useState } from "react";
 import {
   Button,
   ExactMatchIcon,
@@ -9,8 +10,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger
-} from "src";
-import {useState} from "react";
+} from "../../src";
 
 const ExactMatch = () => {
   const [isActive, setIsActive] = useState(false);

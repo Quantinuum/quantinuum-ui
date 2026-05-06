@@ -6,7 +6,7 @@ import {
     StatusIconRetrying,
     StatusIconSubmitted,
     StatusIconSuccess
-} from "src";
+} from "../../src";
 
 
 const StatusIcons = () => {

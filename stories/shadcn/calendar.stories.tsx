@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Calendar } from "src";
+import { Calendar } from "../../src";
 
 export function CalendarDemo() {
   const [dateRange, setDateRange] = React.useState<DateRange | undefined>({

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import React from "react";
 
-import { Switch } from "src";
+import { Switch } from "../../src";
 
 const meta: Meta<typeof Switch> = {
   component: (args) => {

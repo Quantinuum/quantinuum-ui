@@ -1,13 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import {
-  Button, Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger
-} from "src";
+    Button, Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle
+} from "../../src";
 
 const DialogDemo = (props: {isOpen: boolean, isBottomDialog: boolean, isDismissable: boolean}) => {
   return (

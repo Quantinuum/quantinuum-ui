@@ -4,7 +4,6 @@ import typescript from "@rollup/plugin-typescript";
 import copy from "rollup-plugin-copy";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import preserveDirectives from "rollup-plugin-preserve-directives";
-import { terser } from "rollup-plugin-terser";
 
 
  function onwarn(warning, warn) {
@@ -38,7 +37,6 @@ export default [{
     copy({
       targets: [{ src: "./src/tokens.css", dest: "./dist" }],
     }),
-    terser({ compress: { directives: false } }),
     preserveDirectives(),
   ],
 
@@ -59,7 +57,6 @@ export default [{
       outDir: "dist/src/utils/",
       declaration: false,
     }),
-    terser(),
   ],
 
 },

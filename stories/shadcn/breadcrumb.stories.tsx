@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import {  Breadcrumb,
+import {
+    Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
     BreadcrumbList,
     BreadcrumbPage,
-    BreadcrumbSeparator, } from "src";
+    BreadcrumbSeparator,
+} from "../../src";
 
 export function BadgeDemo() {
   return (

@@ -1,8 +1,8 @@
 'use client'
 import { ComputerIcon, MoonIcon, SunIcon } from "lucide-react";
 import React from "react";
-import { Button } from "src/shadcn/ui/button";
-import { getTheme, subscribeToTheme, setTheme } from "src/utils/darkMode";
+import { Button } from "../../src/shadcn/ui/button";
+import { getTheme, setTheme, subscribeToTheme } from "../../src/utils/darkMode";
 
 export const useTheme = () => {
   const [theme, _setLocalTheme] = React.useState(typeof window !== "undefined" ? getTheme() : {mode: 'dark' as const, isDark: true});

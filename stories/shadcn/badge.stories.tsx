@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Badge } from "src";
+import { Badge } from "../../src";
 
 export function BadgeDemo() {
   return (

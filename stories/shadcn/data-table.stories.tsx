@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import * as React from "react"
 import {
-  CaretSortIcon,
-  ChevronDownIcon,
-  DotsHorizontalIcon,
-} from "@radix-ui/react-icons"
+    CaretSortIcon,
+    ChevronDownIcon,
+    DotsHorizontalIcon,
+} from "@radix-ui/react-icons";
 import {
     ColumnDef,
     ColumnFiltersState,
@@ -17,23 +16,22 @@ import {
     getPaginationRowModel,
     getSortedRowModel,
     useReactTable,
-  } from "@tanstack/react-table"
-  import { Button, Checkbox, Input, TableCaption } from "src"
-  import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-    DropdownMenu,
+} from "@tanstack/react-table";
+import * as React from "react";
+import {
+    Button, Checkbox, DropdownMenu,
     DropdownMenuCheckboxItem,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuLabel,
     DropdownMenuSeparator,
-    DropdownMenuTrigger,
-  } from "src"
+    DropdownMenuTrigger, Input, Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow
+} from "../../src";
 
   const data: Payment[] = [
     {

@@ -1,11 +1,11 @@
 import {
-  Button,
-  Input,
-  Label,
-  Popover,
-  PopoverContent,
-  PopoverTrigger
-} from "src";
+    Button,
+    Input,
+    Label,
+    Popover,
+    PopoverContent,
+    PopoverTrigger
+} from "../../src";
 
 import type { Meta, StoryObj } from "@storybook/react-vite";
 

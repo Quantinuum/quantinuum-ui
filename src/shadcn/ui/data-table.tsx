@@ -1,6 +1,5 @@
 "use client"
  
-import * as React from "react"
 import {
   CaretSortIcon,
   ChevronDownIcon,
@@ -18,27 +17,22 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table"
+import * as React from "react"
  
-import { Button } from "src"
-import { Checkbox } from "src"
 import {
-  DropdownMenu,
+  Button, Checkbox, DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "src"
-import { Input } from "src"
-import {
-  Table,
+  DropdownMenuTrigger, Input, Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
-} from "src"
+  TableRow
+} from "../../../src"
  
 const data: Payment[] = [
   {

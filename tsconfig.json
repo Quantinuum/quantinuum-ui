@@ -2,9 +2,9 @@
 {
   "include": ["**/*.ts", "**/*.tsx"],
   "compilerOptions": {
-    "baseUrl": "./",
     "paths": {
-      "shadcn/ui/*": ["src/shadcn/ui/*"],
+      "shadcn/ui/*": ["./src/shadcn/ui/*"],
+      "./": ["./*"],
     },
     "target": "es2016",
     "strict": true,
@@ -12,12 +12,11 @@
     "strictNullChecks": true,
     "skipLibCheck": true,
     "jsx": "react-jsx",
-    "module": "ESNext",
+    "module": "esnext",
     "declaration": true,
-
     "sourceMap": true,
     "outDir": "dist",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true
   }

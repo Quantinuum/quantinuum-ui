@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import React, { ComponentProps } from "react";
-import { Label, RadioGroup, RadioGroupItem } from "src";
+import { Label, RadioGroup, RadioGroupItem } from "../../src";
 
 const Demo = (args: ComponentProps<typeof RadioGroup>) => {
   const [value, setValue] = React.useState(args.value);

@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "src";
+import { Avatar, AvatarFallback, AvatarImage } from "../../src";
 export function AvatarDemo() {
   return (
     <Avatar>
