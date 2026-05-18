@@ -12,6 +12,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "rm -rf ./dist && rollup -c && storybook build && cp ./dist/src/utils/syncTheme.js ./storybook-static/syncTheme.js",
     "lint": "tsc && eslint src",
+    "check": "npx tsc -b",
     "build": "rm -rf ./dist && rollup -c",
     "prepare": "husky"
   },
@@ -90,7 +91,6 @@
     "semantic-release": "^24.2.5",
     "sonner": "^2.0.1",
     "storybook": "^10.3.5",
-    "tailwindcss-animate": "^1.0.7",
     "typescript": "^6.0.2"
   },
   "dependencies": {
@@ -134,7 +134,6 @@
     "react-hook-form": "^7.50.1",
     "react-icons": "^5.3.0",
     "tailwindcss": "^3.4.15",
-    "tailwindcss-animate": "^1.0.7",
     "zod": "^3.25.56"
   }
 }

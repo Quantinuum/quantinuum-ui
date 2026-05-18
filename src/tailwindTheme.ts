@@ -1,24 +1,25 @@
 import typography from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
-import animate from "tailwindcss-animate";
+
 export const tailwindTheme = {
-  darkMode: ['class', '[data-theme="dark"]'],
+  darkMode: ["class", '[data-theme="dark"]'],
   theme: {
     container: {
       center: true,
-      padding: '2rem',
+      padding: "2rem",
       screens: {
-        'large-laptop': '1400px', // Above 1400px wide screens set containers to have a max-width of 1400px
+        "large-laptop": "1400px", // Above 1400px wide screens set containers to have a max-width of 1400px
       },
     },
-    screens: { // Overriding default breakpoints - We want to replace rather than extend - all the breakpoints must be clearly defined here
-      xs: '375px',
-      sm: '576px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1536px',
-      '3xl': '1920px',
+    screens: {
+      // Overriding default breakpoints - We want to replace rather than extend - all the breakpoints must be clearly defined here
+      xs: "375px",
+      sm: "576px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      "3xl": "1920px",
     },
     extend: {
       colors: {
@@ -83,5 +84,5 @@ export const tailwindTheme = {
       },
     },
   },
-  plugins: [animate, typography],
+  plugins: [typography],
 } satisfies Partial<Config>;
