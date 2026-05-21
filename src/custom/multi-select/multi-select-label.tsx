@@ -15,7 +15,7 @@ export const MultiSelectLabel = ({
   return (
     <div className={cn("flex items-center gap-1.5", position === "left" && "whitespace-nowrap")}>
       {Icon && <Icon className="h-4 w-4 shrink-0" />}
-      <label htmlFor={htmlFor} className={cn("text-sm font-medium", position === "left" ? "leading-[36px]" : "leading-none")}>
+      <label htmlFor={htmlFor} className="text-sm font-medium leading-none">
         {label}
       </label>
       {tooltip && (
