@@ -55,6 +55,7 @@ export const MultiSelectTrigger = forwardRef<HTMLButtonElement, MultiSelectTrigg
           )}
         </div>
       )}
+
       <div className="ml-auto shrink-0">
         {isLoading ? (
           <Loader2 className="h-4 w-4 animate-spin opacity-50" />
@@ -67,4 +68,5 @@ export const MultiSelectTrigger = forwardRef<HTMLButtonElement, MultiSelectTrigg
     </button>
   ),
 )
+
 MultiSelectTrigger.displayName = "MultiSelectTrigger"
