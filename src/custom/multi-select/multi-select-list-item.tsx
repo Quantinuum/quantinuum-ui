@@ -10,7 +10,7 @@ export const MultiSelectListItem = ({
   isSelected,
   isDisabled,
   disabledTooltip,
-  renderOption,
+  renderItem,
 }: MultiSelectListItemProps) => {
   const itemContent = (
     <div className={cn("flex items-start gap-2", isDisabled && "opacity-50 cursor-not-allowed")}>
@@ -24,8 +24,8 @@ export const MultiSelectListItem = ({
       </div>
 
       <div className="flex flex-wrap items-center gap-2">
-        {renderOption ? (
-          renderOption(item)
+        {renderItem ? (
+          renderItem(item)
         ) : (
           <>
             {item.icon && <item.icon className="h-4 w-4 text-muted-foreground shrink-0" />}

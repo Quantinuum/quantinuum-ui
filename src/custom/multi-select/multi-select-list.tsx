@@ -17,7 +17,7 @@ export const MultiSelectList = ({
   isSearchVisible = true,
   disabledTooltip,
   clearAllText = "Clear All",
-  renderOption,
+  renderItem,
   onInputChange,
   onSelect,
   onClearAll,
@@ -97,7 +97,7 @@ export const MultiSelectList = ({
                     isSelected={isSelected}
                     isDisabled={isDisabled}
                     disabledTooltip={disabledTooltip}
-                    renderOption={renderOption}
+                    renderItem={renderItem}
                   />
                 </CommandItem>
               )
