@@ -28,8 +28,20 @@ jobs:
         run: npm run build-storybook
 
       - name: Run Chromatic
+        id: chromatic
         uses: chromaui/action@latest
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: storybook-static
           exitZeroOnChanges: true
+
+      - name: Post Storybook link as PR comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `📚 **Storybook Preview**: ${{ steps.chromatic.outputs.storybookUrl }}`
+            })
