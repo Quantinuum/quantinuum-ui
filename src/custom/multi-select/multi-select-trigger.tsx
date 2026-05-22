@@ -38,11 +38,21 @@ export const MultiSelectTrigger = forwardRef<HTMLButtonElement, MultiSelectTrigg
       {value.length === 0 ? (
         <div className="flex-1 text-left text-muted-foreground">{placeholder}</div>
       ) : (
-        <div className="flex flex-1 flex-wrap items-center gap-2">
+        <div
+          className="flex flex-1 flex-wrap items-center gap-2"
+          role={showChips ? "list" : undefined}
+          aria-label={showChips ? "Selected items" : undefined}
+        >
           {showChips ? (
             <>
               {value.map((item) => (
-                <Badge key={item.value} variant="secondary" className="min-w-[1.5rem] text-center px-2 text-xs">
+                <Badge
+                  key={item.value}
+                  variant="secondary"
+                  className="min-w-[1.5rem] text-center px-2 text-xs"
+                  role="listitem"
+                  aria-label={`Selected item: ${item.label}`}
+                >
                   {item.label}
                 </Badge>
               ))}
