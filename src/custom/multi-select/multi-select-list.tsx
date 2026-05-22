@@ -18,7 +18,7 @@ export const MultiSelectList = ({
   disabledTooltip,
   clearAllText = "Clear All",
   renderItem,
-  onInputChange,
+  onSearchInputChange,
   onSelect,
   onClearAll,
 }: MultiSelectListProps) => {
@@ -63,7 +63,7 @@ export const MultiSelectList = ({
 
           <CommandPrimitive.Input
             value={inputValue}
-            onValueChange={onInputChange}
+            onValueChange={onSearchInputChange}
             placeholder={searchPlaceholder}
             className="flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
           />

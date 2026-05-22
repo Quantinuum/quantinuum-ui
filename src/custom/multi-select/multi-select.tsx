@@ -44,20 +44,20 @@ const MultiSelect = forwardRef<HTMLButtonElement, MultiSelectProps>(
     const [open, setOpen] = useState(false)
     const [inputValue, setInputValue] = useState("")
 
-    const handleInputChange = useCallback(
+    const handleSearchInputChange = useCallback(
       (val: string) => {
-        setInputValue(val)
-        onSearchChange?.(val)
+        setInputValue(val) // Update local input state for search value
+        onSearchChange?.(val) // Notify parent component of search input change
       },
       [onSearchChange],
     )
 
     const handleOpenChange = useCallback(
-      (nextOpen: boolean) => {
-        setOpen(nextOpen)
-        if (!nextOpen) {
-          setInputValue("")
-          onSearchChange?.("")
+      (isNextOpen: boolean) => {
+        setOpen(isNextOpen)
+        if (!isNextOpen) {
+          setInputValue("") // Clear local input state when closing the dropdown
+          onSearchChange?.("") // Clear search input when closing the dropdown
         }
       },
       [onSearchChange],
@@ -124,7 +124,7 @@ const MultiSelect = forwardRef<HTMLButtonElement, MultiSelectProps>(
                 disabledTooltip={disabledTooltip}
                 clearAllText={clearAllText}
                 renderItem={renderItem}
-                onInputChange={handleInputChange}
+                onSearchInputChange={handleSearchInputChange}
                 onSelect={handleSelect}
                 onClearAll={handleClearAll}
               />

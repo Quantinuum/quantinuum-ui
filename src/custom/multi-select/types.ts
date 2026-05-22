@@ -73,6 +73,6 @@ export interface MultiSelectListProps {
   value: MultiSelectItem[]
   searchPlaceholder: string
   emptySearchMessage: string
-  onInputChange: (val: string) => void
+  onSearchInputChange: (val: string) => void
   onSelect: (option: MultiSelectItem) => void
 }
