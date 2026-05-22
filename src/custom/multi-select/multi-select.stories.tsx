@@ -26,7 +26,6 @@ interface MultiSelectContainerProps
     | "bottomMessage"
     | "showChips"
     | "isSearchVisible"
-    | "modal"
     | "data-testid"
     | "disabledTooltip"
     | "clearAllText"
@@ -126,10 +125,6 @@ const meta: Meta<typeof MultiSelectContainer> = {
       control: "boolean",
       description: "Show search input in dropdown",
     },
-    modal: {
-      control: "boolean",
-      description: "Enable modal behavior for popover",
-    },
     disabledTooltip: {
       control: "text",
       description: "Tooltip text shown for disabled items",
@@ -154,7 +149,6 @@ const meta: Meta<typeof MultiSelectContainer> = {
     disabled: false,
     showChips: false,
     isSearchVisible: true,
-    modal: false,
     disabledTooltip: "Item disabled",
     clearAllText: "Clear All",
   },
@@ -277,7 +271,7 @@ export const CustomRender: Story = {
                   {item.label.charAt(0)}
                 </div>
                 <div className="flex flex-col flex-1">
-                  <span className="text-sm font-medium">{item.label}</span>
+                  <span className="text-sm font-medium text-muted-foreground">{item.label}</span>
                   <span className="text-xs text-muted-foreground">{email}</span>
                 </div>
               </div>

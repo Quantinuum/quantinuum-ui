@@ -28,7 +28,6 @@ export interface MultiSelectProps {
   bottomMessage?: string
   showChips?: boolean
   isSearchVisible?: boolean
-  modal?: boolean
   "data-testid"?: string
   disabledTooltip?: string
   clearAllText?: string
