@@ -22,11 +22,7 @@
     "branches": [
       "main",
       {
-        "name": "NRP-2803-fix-circular-dependencies",
-        "prerelease": true
-      },
-      {
-        "name": "fix-vulns-2",
+        "name": "NRP-3193-multiselect",
         "prerelease": true
       }
     ]
