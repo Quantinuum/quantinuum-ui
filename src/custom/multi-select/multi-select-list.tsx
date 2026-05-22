@@ -78,7 +78,7 @@ export const MultiSelectList = ({
 
         {/* Items */}
         {items.length > 0 && (
-          <CommandGroup className={cn(isLoading && "opacity-50 pointer-events-none")}>
+          <CommandGroup className={cn("p-0", isLoading && "opacity-50 pointer-events-none")}>
             {items.map((option) => {
               const isSelected = selectedValues.has(option.value)
               const isDisabled = option.disabled === true
@@ -89,7 +89,7 @@ export const MultiSelectList = ({
                   value={option.value}
                   disabled={isDisabled}
                   onSelect={handleItemSelect}
-                  className="cursor-pointer"
+                  className="cursor-pointer hover:bg-muted rounded-none px-2"
                   tabIndex={0}
                 >
                   <MultiSelectListItem
@@ -109,10 +109,10 @@ export const MultiSelectList = ({
         {value.length > 0 && (
           <>
             <CommandSeparator />
-            <CommandGroup>
+            <CommandGroup className="p-0">
               <CommandItem
                 onSelect={onClearAll}
-                className="justify-center text-center cursor-pointer"
+                className="justify-center text-center cursor-pointer hover:bg-muted rounded-none px-2"
               >
                 {clearAllText}
               </CommandItem>

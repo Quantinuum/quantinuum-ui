@@ -13,7 +13,7 @@ export const MultiSelectListItem = ({
   renderItem,
 }: MultiSelectListItemProps) => {
   const itemContent = (
-    <div className={cn("flex items-start gap-2", isDisabled && "opacity-50 cursor-not-allowed")}>
+    <div className={cn("flex items-start gap-2 w-full", isDisabled && "opacity-50 cursor-not-allowed")}>
       <div
         className={cn(
           "mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary shrink-0 mt-0.5",
@@ -23,7 +23,7 @@ export const MultiSelectListItem = ({
         <CheckIcon className="h-4 w-4" />
       </div>
 
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2 flex-1">
         {renderItem ? (
           renderItem(item)
         ) : (
