@@ -23,6 +23,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: Enable pnpm via corepack
+        run: corepack enable pnpm
+
       - run: pnpm i --frozen-lockfile
       - run: pnpm run lint
       - run: pnpm run build
