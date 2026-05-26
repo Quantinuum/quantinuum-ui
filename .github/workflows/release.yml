@@ -22,12 +22,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: "pnpm"
 
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run build
-
+      - run: pnpm i --frozen-lockfile
+      - run: pnpm run lint
+      - run: pnpm run build
 
       - run: npx semantic-release
         env:
@@ -35,7 +34,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Build storybook site
-        run: npm run build-storybook
+        run: pnpm run build-storybook
 
       - name: Upload static files as artifact
         id: deployment

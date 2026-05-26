@@ -2,25 +2,25 @@ name: Pre Release library
 on:
   push:
     branches:
-        - '*'         # matches every branch that doesn't contain a '/'
-        - '*/*'       # matches every branch containing a single '/'
-        - '**'        # matches every branch
-        - '!main'   # excludes main
+      - "*" # matches every branch that doesn't contain a '/'
+      - "*/*" # matches every branch containing a single '/'
+      - "**" # matches every branch
+      - "!main" # excludes main
 
 jobs:
   release:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4 
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-            node-version: 20
-            cache: 'npm'
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run build 
-      - run: npx semantic-release
+          node-version: 20
+          cache: "pnpm"
+      - run: pnpm i --frozen-lockfile
+      - run: pnpm run lint
+      - run: pnpm run build
+      - run: pnpm dlx semantic-release
         env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
