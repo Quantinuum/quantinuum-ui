@@ -21,6 +21,17 @@ const SonnerDemo = (props: {defaultStyles: Boolean}) => {
     )
 }
 
+const SonnerTopLongTextDemo = () => {
+  const longDescription =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.';
+  return (
+    <div>
+      <SonnerToast closeButton duration={9000000} position="top-center" />
+      <Button onClick={() => sonner.toast.info('Lorem Ipsum', {description: longDescription})}>Show Top Info Toast</Button>
+    </div>
+  );
+};
+
 const meta: Meta<typeof SonnerDemo> = {
   component: SonnerDemo,
 };
@@ -29,4 +40,8 @@ export default meta;
 
 export const Default: StoryObj<typeof SonnerDemo> = {
   args: {defaultStyles: true},
+};
+
+export const TopLongText: StoryObj<typeof SonnerTopLongTextDemo> = {
+  render: () => <SonnerTopLongTextDemo />,
 };
