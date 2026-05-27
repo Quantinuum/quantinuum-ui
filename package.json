@@ -129,8 +129,7 @@
     "input-otp": "^1.4.1",
     "react-day-picker": "^8.10.0",
     "sonner": "^2.0.1",
-    "tailwind-merge": "^2.6.1",
-    "vite": "^8.0.13"
+    "tailwind-merge": "^2.6.1"
   },
   "peerDependencies": {
     "@hookform/resolvers": "^3.9.0",
