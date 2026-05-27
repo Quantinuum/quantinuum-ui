@@ -97,7 +97,8 @@
     "semantic-release": "^24.2.5",
     "sonner": "^2.0.1",
     "storybook": "^10.3.5",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "vite": "^8.0.13"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
