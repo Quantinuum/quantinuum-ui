@@ -4,6 +4,16 @@ import typescript from "@rollup/plugin-typescript";
 import copy from "rollup-plugin-copy";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import preserveDirectives from "rollup-plugin-preserve-directives";
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
+const pkg = require("./package.json");
+
+const external = [
+  ...Object.keys(pkg.dependencies || {}),
+  ...Object.keys(pkg.peerDependencies || {}),
+  /node_modules/,
+];
 
 
  function onwarn(warning, warn) {
@@ -18,6 +28,7 @@ import preserveDirectives from "rollup-plugin-preserve-directives";
 export default [{
  onwarn,
   input: "src/index.ts",
+  external,
   output: [
     {
       dir: "dist/",
@@ -64,6 +75,7 @@ export default [{
 {
   onwarn,
   input: "src/index.ts",
+  external,
   output: [
     {
       file: "dist/tailwind-manifest.js",
