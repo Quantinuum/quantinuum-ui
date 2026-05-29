@@ -40,6 +40,7 @@ export default [{
     typescript({
       tsconfig: "./tsconfig.json",
       declarationDir: "./dist/types",
+      importHelpers: false,
     }),
     copy({
       targets: [{ src: "./src/tokens.css", dest: "./dist" }],
@@ -85,6 +86,7 @@ export default [{
     typescript({
       declaration: false,
       tsconfig: "./tsconfig.json",
+      importHelpers: false,
     }),
     preserveDirectives(),
   ],
