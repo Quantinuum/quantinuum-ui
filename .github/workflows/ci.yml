@@ -14,9 +14,11 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: "npm"
+          node-version: 22
 
-      - run: npm ci
-      - run: npm run lint
-      - run: npm test
+      - name: Enable pnpm via corepack
+        run: corepack enable pnpm
+
+      - run: pnpm i --frozen-lockfile
+      - run: pnpm run lint
+      - run: pnpm test
