@@ -13,7 +13,7 @@ const mockItems: MultiSelectItem[] = [
 
 const defaultProps = {
   items: mockItems,
-  value: [] as MultiSelectItem[],
+  value: [] satisfies MultiSelectItem[],
   onChange: vi.fn(),
 }
 
