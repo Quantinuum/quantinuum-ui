@@ -2,7 +2,6 @@ import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
 import copy from "rollup-plugin-copy";
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import preserveDirectives from "rollup-plugin-preserve-directives";
 import { createRequire } from "module";
 
@@ -38,9 +37,6 @@ export default [{
     },
   ],
   plugins: [
-    peerDepsExternal(),
-    resolve(),
-    commonjs(),
     typescript({
       tsconfig: "./tsconfig.json",
       declarationDir: "./dist/types",
@@ -67,6 +63,7 @@ export default [{
       tsconfig: "./tsconfig.json",
       outDir: "dist/src/utils/",
       declaration: false,
+      importHelpers: false,
     }),
   ],
 
@@ -85,9 +82,6 @@ export default [{
     },
   ],
   plugins: [
-    peerDepsExternal(),
-    resolve(),
-    commonjs(),
     typescript({
       declaration: false,
       tsconfig: "./tsconfig.json",
