@@ -21,11 +21,7 @@
   },
   "release": {
     "branches": [
-      "main",
-      {
-        "name": "NRP-3193-multiselect",
-        "prerelease": false
-      }
+      "main"
     ]
   },
   "publishConfig": {
