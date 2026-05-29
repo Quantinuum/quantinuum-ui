@@ -96,13 +96,13 @@ importers:
         specifier: ^0.468.0
         version: 0.468.0(react@18.3.1)
       react:
-        specifier: ^18.2.0
+        specifier: ^18.3.0
         version: 18.3.1
       react-day-picker:
         specifier: ^8.10.0
         version: 8.10.2(date-fns@3.6.0)(react@18.3.1)
       react-dom:
-        specifier: ^18.2.0
+        specifier: ^18.3.0
         version: 18.3.1(react@18.3.1)
       react-hook-form:
         specifier: ^7.50.1
