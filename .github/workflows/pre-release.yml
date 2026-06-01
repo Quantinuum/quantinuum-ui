@@ -49,7 +49,6 @@ jobs:
           cat > .releaserc.json << EOF
           {
             "branches": [
-              "main",
               { "name": "${BRANCH_NAME}", "prerelease": true }
             ]
           }
