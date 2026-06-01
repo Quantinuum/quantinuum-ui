@@ -34,12 +34,13 @@ jobs:
           cat > .releaserc.json << EOF
           {
             "branches": [
+              "main",
               { "name": "${BRANCH_NAME}", "prerelease": true }
             ]
           }
           EOF
 
-      - name: Debug prerelease setup
+      - name: Debug prerelease!!!
         run: |
           echo "Current branch: $(git branch --show-current)"
           echo "GITHUB_REF_NAME: $GITHUB_REF_NAME"
