@@ -14,10 +14,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Ensure workflow is run from main
+        if: ${{ github.ref_name != 'main' }}
+        run: |
+          echo "This workflow must be run with 'Use workflow from: main'."
+          echo "Current workflow ref: ${{ github.ref_name }}"
+          exit 1
+
       - name: Check out code
         uses: actions/checkout@v6
         with:
           ref: ${{ github.event.inputs.branch }}
+          fetch-depth: 0
 
       - name: Set up node
         uses: actions/setup-node@v4
@@ -30,6 +38,9 @@ jobs:
       - run: pnpm i --frozen-lockfile
       - run: pnpm run lint
       - run: pnpm run build
+
+      - name: Fetch main branch for semantic-release
+        run: git fetch origin main:main --tags
 
       - name: Force prerelease config
         env:
