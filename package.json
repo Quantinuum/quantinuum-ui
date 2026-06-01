@@ -19,19 +19,7 @@
   },
   "release": {
     "branches": [
-      "main",
-      {
-        "name": "NPR-3247-align-quui-minimum-release-age-with-velum",
-        "prerelease": true
-      },
-      {
-        "name": "NRP-2803-fix-circular-dependencies",
-        "prerelease": true
-      },
-      {
-        "name": "fix-vulns-2",
-        "prerelease": true
-      }
+      "main"
     ]
   },
   "publishConfig": {
