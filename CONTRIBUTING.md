@@ -41,4 +41,5 @@ pnpm add @quantinuum/quantinuum-ui@1.2.0-feature-x.1
 
 For every additional trigger on the same branch, a new pre-release version is created (e.g. `feature-x.2`, `feature-x.3`, etc.).
 
-> **Note:** Pre-releases cannot be triggered automatically on push. This is a security measure to prevent unauthorized npm publishes. Only maintainers with write access can trigger pre-releases via the GitHub UI.
+**Note:** Pre-releases cannot be triggered automatically on push. This is a security measure.
+Only maintainers with write access can trigger pre-releases.
