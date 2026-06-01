@@ -57,5 +57,7 @@ jobs:
 
       - run: pnpm exec semantic-release
         env:
+          GITHUB_REF: refs/heads/${{ github.event.inputs.branch }}
+          GITHUB_REF_NAME: ${{ github.event.inputs.branch }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

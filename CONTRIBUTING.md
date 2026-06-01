@@ -47,3 +47,4 @@ For every additional trigger on the same branch, a new pre-release version is cr
 - Only maintainers with write access can trigger pre-releases.
 - The pre-release workflow also hard-fails if it is run from any branch other than `main`
 - The pre-release workflow also fetches full git history and `main` tags before publishing so semantic-release can correctly compare against `main`.
+- The pre-release workflow checks out the selected feature branch and runs semantic-release with that branch context.
