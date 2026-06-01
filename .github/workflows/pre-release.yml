@@ -40,15 +40,6 @@ jobs:
           }
           EOF
 
-      - name: Debug prerelease!!!
-        run: |
-          echo "Current branch: $(git branch --show-current)"
-          echo "GITHUB_REF_NAME: $GITHUB_REF_NAME"
-          echo ".releaserc.json contents:"
-          cat .releaserc.json
-          echo "Remote branches matching:"
-          git ls-remote --heads origin ${{ github.ref_name }}
-
       - run: pnpm exec semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
