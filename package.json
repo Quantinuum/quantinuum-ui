@@ -19,11 +19,6 @@
     "build": "rm -rf ./dist && rollup -c",
     "prepare": "husky"
   },
-  "release": {
-    "branches": [
-      "main"
-    ]
-  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "tag": "latest",
