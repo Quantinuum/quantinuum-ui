@@ -32,12 +32,12 @@
   "exports": {
     ".": {
       "import": "./dist/src/index.js",
-      "types": "./dist/types/src/index.d.ts",
+      "types": "./dist/types/index.d.ts",
       "default": "./dist/src/index.js"
     },
     "./tokens.css": "./dist/tokens.css"
   },
-  "types": "./dist/types/src/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "mode": "production",
   "repository": {
     "type": "git",
