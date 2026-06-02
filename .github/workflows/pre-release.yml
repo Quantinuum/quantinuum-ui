@@ -1,10 +1,6 @@
 name: Pre Release library
 on:
   workflow_dispatch:
-    inputs:
-      branch:
-        description: "Branch to prerelease from"
-        required: true
 
 permissions:
   contents: write
@@ -17,7 +13,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v6
         with:
-          ref: ${{ github.event.inputs.branch }}
+          fetch-depth: 0
 
       - name: Set up node
         uses: actions/setup-node@v4
@@ -33,7 +29,7 @@ jobs:
 
       - name: Force prerelease config
         env:
-          BRANCH_NAME: ${{ github.event.inputs.branch }}
+          BRANCH_NAME: ${{ github.ref_name }}
         run: |
           cat > .releaserc.json << EOF
           {

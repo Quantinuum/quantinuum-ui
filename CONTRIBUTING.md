@@ -31,15 +31,17 @@ Pre-releases are triggered **manually** by a maintainer via GitHub Actions:
 2. Commit using conventional commit format, e.g. `feat: add new feature x`.
 3. Push your branch to the repository.
 4. A maintainer navigates to **Actions → Pre Release library → Run workflow**.
-5. The maintainer enters your branch name and triggers the workflow.
-6. A pre-release version is published to npm (e.g. `1.2.0-feature-x.1`).
+5. In **Use workflow from**, select your feature branch.
+6. Click **Run workflow**.
+7. A pre-release version will be published if the branch has a valid conventional commit release type i.e. `feat`.
 
 Install the pre-release in your consuming project:
 ```bash
-pnpm add @quantinuum/quantinuum-ui@1.2.0-feature-x.1
+pnpm add @quantinuum/quantinuum-ui@4.0.4-feature-x.1
 ```
 
 For every additional trigger on the same branch, a new pre-release version is created (e.g. `feature-x.2`, `feature-x.3`, etc.).
 
-**Note:** Pre-releases cannot be triggered automatically on push. This is a security measure.
-Only maintainers with write access can trigger pre-releases.
+**Note:**
+- Pre-releases cannot be triggered automatically on push. This is a security measure.
+- Only collaborators with write access can trigger pre-releases.
