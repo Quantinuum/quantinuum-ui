@@ -2,7 +2,7 @@
 
 exports[`MultiSelect > Props > should render as expected 1`] = `
 <div
-  class="flex flex-col gap-1.5 w-full"
+  class="flex flex-col gap-1.5 min-w-52 max-w-3xl w-full"
 >
   <div
     class=""
