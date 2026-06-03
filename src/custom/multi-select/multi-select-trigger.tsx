@@ -26,7 +26,7 @@ export const MultiSelectTrigger = forwardRef<HTMLButtonElement, MultiSelectTrigg
       aria-invalid={hasError || undefined}
       aria-busy={isLoading || undefined}
       className={cn(
-        "flex min-h-9 w-full items-center gap-2 rounded-md border bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background",
+        "flex min-h-9 w-full items-center gap-2 rounded-md border bg-transparent px-3 py-1.5 text-sm shadow-sm ring-offset-background",
         "hover:bg-muted",
         "focus:outline-none focus:ring-1 focus:ring-ring",
         "disabled:cursor-not-allowed disabled:opacity-50",
