@@ -1,6 +1,6 @@
 "use client"
 
-import { forwardRef, useCallback, useId, useState } from "react"
+import { forwardRef, useCallback, useId, useMemo, useState } from "react"
 import { Popover, PopoverContent, PopoverTrigger } from "../../shadcn/ui/popover"
 import { MultiSelectLabel } from "./multi-select-label"
 import { MultiSelectList } from "./multi-select-list"
@@ -42,6 +42,17 @@ const MultiSelect = forwardRef<HTMLButtonElement, MultiSelectProps>(
 
     const [open, setOpen] = useState(false)
     const [inputValue, setInputValue] = useState("")
+
+    const displayedItems = useMemo(() => {
+      // If onSearchChange is provided, we assume the parent component is handling the search i.e for async search, so we return the items as-is. Otherwise, we perform client-side filtering based on the inputValue.
+      if (onSearchChange || !inputValue) {
+        return items
+      }
+
+      return items.filter((item) =>
+        item.label.toLowerCase().includes(inputValue.toLowerCase()),
+      )
+    }, [items, inputValue, onSearchChange])
 
     const handleSearchInputChange = useCallback(
       (val: string) => {
@@ -115,7 +126,7 @@ const MultiSelect = forwardRef<HTMLButtonElement, MultiSelectProps>(
               <MultiSelectList
                 inputValue={inputValue}
                 isLoading={isLoading}
-                items={items}
+                items={displayedItems}
                 value={value}
                 searchPlaceholder={searchPlaceholder}
                 emptySearchMessage={emptySearchMessage}

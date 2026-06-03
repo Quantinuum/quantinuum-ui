@@ -142,34 +142,6 @@ describe("MultiSelect", () => {
       expect(screen.getByRole("combobox")).toBeDisabled()
     })
 
-    it("should hide search input when isSearchVisible is false", async () => {
-      const user = userEvent.setup()
-      render(
-        <MultiSelect
-          {...defaultProps}
-          isSearchVisible={false}
-        />
-      )
-
-      await user.click(screen.getByRole("combobox"))
-      expect(screen.queryByPlaceholderText("Search...")).not.toBeInTheDocument()
-    })
-
-    it("should display empty message when items list is empty", async () => {
-      const user = userEvent.setup()
-      render(
-        <MultiSelect
-          {...defaultProps}
-          items={[]}
-          emptySearchMessage="No results found."
-        />,
-      )
-
-      await user.click(screen.getByRole("combobox"))
-      await user.type(screen.getByPlaceholderText("Search..."), "xyz")
-
-      expect(screen.getByText("No results found.")).toBeInTheDocument()
-    })
   })
 
   describe("Callbacks", () => {
@@ -223,26 +195,9 @@ describe("MultiSelect", () => {
       expect(onChange).toHaveBeenCalledWith([])
     })
 
-    it("should call onSearchChange for each keystroke", async () => {
-      const user = userEvent.setup()
-      const onSearchChange = vi.fn()
-      render(
-        <MultiSelect
-          {...defaultProps}
-          onSearchChange={onSearchChange}
-        />
-      )
-
-      await user.click(screen.getByRole("combobox"))
-      await user.type(screen.getByPlaceholderText("Search..."), "Ali")
-
-      expect(onSearchChange).toHaveBeenCalledWith("A")
-      expect(onSearchChange).toHaveBeenCalledWith("Al")
-      expect(onSearchChange).toHaveBeenCalledWith("Ali")
-    })
   })
 
-  describe("Behavior", () => {
+  describe("Interaction", () => {
     it("should open dropdown on click", async () => {
       const user = userEvent.setup()
       render(
@@ -296,6 +251,68 @@ describe("MultiSelect", () => {
       )
 
       expect(screen.getByRole("combobox")).toHaveAttribute("aria-invalid", "true")
+    })
+
+  })
+
+  describe("Search", () => {
+    it("should hide search input when isSearchVisible is false", async () => {
+      const user = userEvent.setup()
+      render(
+        <MultiSelect
+          {...defaultProps}
+          isSearchVisible={false}
+        />
+      )
+
+      await user.click(screen.getByRole("combobox"))
+      expect(screen.queryByPlaceholderText("Search...")).not.toBeInTheDocument()
+    })
+
+    it("should display empty message when no items match", async () => {
+      const user = userEvent.setup()
+      render(
+        <MultiSelect
+          {...defaultProps}
+          items={[]}
+          emptySearchMessage="No results found."
+        />,
+      )
+
+      await user.click(screen.getByRole("combobox"))
+      await user.type(screen.getByPlaceholderText("Search..."), "xyz")
+
+      expect(screen.getByText("No results found.")).toBeInTheDocument()
+    })
+
+    it("should call onSearchChange for each keystroke", async () => {
+      const user = userEvent.setup()
+      const onSearchChange = vi.fn()
+      render(
+        <MultiSelect
+          {...defaultProps}
+          onSearchChange={onSearchChange}
+        />
+      )
+
+      await user.click(screen.getByRole("combobox"))
+      await user.type(screen.getByPlaceholderText("Search..."), "Ali")
+
+      expect(onSearchChange).toHaveBeenCalledWith("A")
+      expect(onSearchChange).toHaveBeenCalledWith("Al")
+      expect(onSearchChange).toHaveBeenCalledWith("Ali")
+    })
+
+    it("should filter items internally when onSearchChange is not provided", async () => {
+      const user = userEvent.setup()
+      render(<MultiSelect {...defaultProps} />)
+
+      await user.click(screen.getByRole("combobox"))
+      await user.type(screen.getByPlaceholderText("Search..."), "ali")
+
+      expect(screen.getByRole("option", { name: "Alice" })).toBeInTheDocument()
+      expect(screen.queryByRole("option", { name: "Bob" })).not.toBeInTheDocument()
+      expect(screen.queryByRole("option", { name: "Charlie" })).not.toBeInTheDocument()
     })
   })
 })
