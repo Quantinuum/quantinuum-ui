@@ -13,6 +13,7 @@ export const MultiSelectTrigger = forwardRef<HTMLButtonElement, MultiSelectTrigg
     isLoading,
     hasError,
     showChips,
+    selectedLabel,
     className,
     ...props
   }, ref) => (
@@ -43,6 +44,7 @@ export const MultiSelectTrigger = forwardRef<HTMLButtonElement, MultiSelectTrigg
           role={showChips ? "list" : undefined}
           aria-label={showChips ? "Selected items" : undefined}
         >
+          {selectedLabel && <span className="text-sm font-medium shrink-0">{selectedLabel}</span>}
           {showChips ? (
             <>
               {value.map((item) => (

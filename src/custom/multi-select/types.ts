@@ -31,6 +31,7 @@ export interface MultiSelectProps {
   "data-testid"?: string
   disabledTooltip?: string
   clearAllText?: string
+  selectedLabel?: string
   renderItem?: (item: MultiSelectItem) => React.ReactNode
 }
 
@@ -50,6 +51,7 @@ export interface MultiSelectTriggerProps
   isLoading: boolean
   hasError: boolean
   showChips?: boolean
+  selectedLabel?: string
 }
 
 export interface MultiSelectListItemProps {

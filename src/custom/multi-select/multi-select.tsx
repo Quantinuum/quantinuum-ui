@@ -32,6 +32,7 @@ const MultiSelect = forwardRef<HTMLButtonElement, MultiSelectProps>(
       "data-testid": dataTestId,
       disabledTooltip = "Item disabled",
       clearAllText = "Clear All",
+      selectedLabel,
       renderItem,
     },
     ref,
@@ -117,6 +118,7 @@ const MultiSelect = forwardRef<HTMLButtonElement, MultiSelectProps>(
                 hasError={!!errorMessage}
                 className={className}
                 showChips={showChips}
+                selectedLabel={selectedLabel}
                 data-testid={dataTestId}
                 aria-describedby={errorMessage || bottomMessage ? messageId : undefined}
               />

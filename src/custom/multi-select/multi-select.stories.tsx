@@ -29,6 +29,7 @@ interface MultiSelectContainerProps
     | "data-testid"
     | "disabledTooltip"
     | "clearAllText"
+    | "selectedLabel"
     | "renderItem"
   > {
   labelIcon?: string
@@ -115,6 +116,10 @@ const meta: Meta<typeof MultiSelectContainer> = {
     errorMessage: { control: "text" },
     bottomMessage: { control: "text" },
     disabled: { control: "boolean" },
+    selectedLabel: {
+      control: "text",
+      description: "Label to show when items are selected (if showChips is false or label is not visible)",
+    },
     showChips: {
       control: "boolean",
       description: "Show individual chips (true) or count badge (false)",
@@ -146,6 +151,7 @@ const meta: Meta<typeof MultiSelectContainer> = {
     bottomMessage: "You can select multiple users.",
     disabled: false,
     showChips: false,
+    selectedLabel: "Assignees",
     isSearchVisible: true,
     disabledTooltip: "Item disabled",
     clearAllText: "Clear All",

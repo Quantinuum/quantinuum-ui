@@ -142,6 +142,21 @@ describe("MultiSelect", () => {
       expect(screen.getByRole("combobox")).toBeDisabled()
     })
 
+    it("should display 'selectedLabel' prefix when items are selected", () => {
+      const selectedLabel="Assignees"
+      render(
+
+        <MultiSelect
+          {...defaultProps}
+          value={[mockItems[0], mockItems[1]]}
+          selectedLabel={selectedLabel}
+        />
+      )
+
+      const trigger = screen.getByRole("combobox")
+      expect(trigger).toHaveTextContent(selectedLabel)
+      expect(trigger).toHaveTextContent("2 Selected")
+    })
   })
 
   describe("Callbacks", () => {
