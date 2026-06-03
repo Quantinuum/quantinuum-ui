@@ -75,17 +75,15 @@ const MultiSelectContainer = ({ labelIcon, ...props }: MultiSelectContainerProps
   }
 
   return (
-    <div className="w-[400px]">
-      <MultiSelect
-        {...props}
-        value={selectedItems}
-        items={items}
-        isLoading={isLoading}
-        onChange={setSelectedItems}
-        onSearchChange={handleSearchChange}
-        labelIcon={labelIcon ? iconMap[labelIcon] : undefined}
-      />
-    </div>
+    <MultiSelect
+      {...props}
+      value={selectedItems}
+      items={items}
+      isLoading={isLoading}
+      onChange={setSelectedItems}
+      onSearchChange={handleSearchChange}
+      labelIcon={labelIcon ? iconMap[labelIcon] : undefined}
+    />
   )
 }
 

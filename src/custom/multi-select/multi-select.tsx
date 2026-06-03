@@ -79,7 +79,7 @@ const MultiSelect = forwardRef<HTMLButtonElement, MultiSelectProps>(
     }, [onChange])
 
     return (
-      <div className={labelPosition === "left" ? "flex items-start gap-3" : "flex flex-col gap-1.5 w-full"}>
+      <div className={labelPosition === "left" ? "flex items-start gap-3 min-w-52 max-w-3xl w-full" : "flex flex-col gap-1.5 min-w-52 max-w-3xl w-full"}>
         {label && (
           <div className={labelPosition === "left" ? "shrink-0 min-h-9 flex items-center" : ""}>
             <MultiSelectLabel
