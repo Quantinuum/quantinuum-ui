@@ -14,8 +14,7 @@ const external = [
   /node_modules/,
 ];
 
-
- function onwarn(warning, warn) {
+function onwarn(warning, warn) {
     if (
       warning.code === "MODULE_LEVEL_DIRECTIVE" &&
       warning.message.includes(`'use client'`)
@@ -23,9 +22,10 @@ const external = [
       return;
     }
     warn(warning);
-  }
+}
+
 export default [{
- onwarn,
+  onwarn,
   input: "src/index.ts",
   external,
   output: [
@@ -46,7 +46,6 @@ export default [{
     }),
     preserveDirectives(),
   ],
-
 }, {
   input: "src/utils/syncTheme.ts",
   output: [
@@ -65,7 +64,6 @@ export default [{
       declaration: false,
     }),
   ],
-
 },
 // Generate small tailwind class manifest for more efficient compiling by consumers.
 {
@@ -87,5 +85,4 @@ export default [{
     }),
     preserveDirectives(),
   ],
-
 }];
