@@ -8,6 +8,7 @@ import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const pkg = require("./package.json");
 
+// Exclude dependencies and peerDependencies from the bundle, as well as any imports from node_modules.
 const external = [
   ...Object.keys(pkg.dependencies || {}),
   ...Object.keys(pkg.peerDependencies || {}),
