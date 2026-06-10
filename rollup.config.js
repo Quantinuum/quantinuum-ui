@@ -74,7 +74,6 @@ export default [{
     {
       file: "dist/tailwind-manifest.js",
       format: "esm",
-      preserveModules: false,
       sourcemap: false,
     },
   ],
