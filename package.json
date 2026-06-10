@@ -14,7 +14,7 @@
     "build-storybook": "rm -rf ./dist && rollup -c && storybook build && cp ./dist/src/utils/syncTheme.js ./storybook-static/syncTheme.js",
     "lint": "tsc && eslint src",
     "check": "npx tsc -b",
-    "build": "rm -rf ./dist && rollup -c",
+    "build": "rm -rf ./dist && rollup -c && rm -rf ./dist/node_modules",
     "prepare": "husky"
   },
   "publishConfig": {
@@ -23,15 +23,16 @@
     "access": "public"
   },
   "files": [
-    "dist"
+    "dist",
+    "!dist/node_modules"
   ],
   "type": "module",
-  "main": "./dist/src/index.js",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
-      "import": "./dist/src/index.js",
+      "import": "./dist/index.js",
       "types": "./dist/types/src/index.d.ts",
-      "default": "./dist/src/index.js"
+      "default": "./dist/index.js"
     },
     "./tokens.css": "./dist/tokens.css"
   },
@@ -64,7 +65,7 @@
     "autoprefixer": "^10.4.16",
     "date-fns": "^3.6.0",
     "eslint": "^9.39.2",
-    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-import-resolver-typescript": "^4.4.3",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-storybook": "10.3.5",
     "husky": "^9.1.7",
@@ -78,9 +79,9 @@
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-scss": "^3.0.0",
     "semantic-release": "^24.2.5",
-    "sonner": "^2.0.1",
     "storybook": "^10.3.5",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "vite": "^8.0.12"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
@@ -111,16 +112,15 @@
     "input-otp": "^1.4.1",
     "react-day-picker": "^8.10.0",
     "sonner": "^2.0.1",
-    "tailwind-merge": "^2.6.1",
-    "vite": "^8.0.13"
+    "tailwind-merge": "^2.6.1"
   },
   "peerDependencies": {
     "@hookform/resolvers": "^3.9.0",
     "@tailwindcss/typography": "^0.5.15",
     "@tanstack/react-table": "^8.11.0",
     "lucide-react": "^0.468.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
     "react-hook-form": "^7.50.1",
     "react-icons": "^5.3.0",
     "tailwindcss": "^3.4.15",
