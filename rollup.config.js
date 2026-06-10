@@ -9,9 +9,9 @@ const require = createRequire(import.meta.url);
 const pkg = require("./package.json");
 
 const external = [
+  ...Object.keys(pkg.dependencies || {}),
   ...Object.keys(pkg.peerDependencies || {}),
-  /^react($|\/)/,
-  /^react-dom($|\/)/,
+  /node_modules/,
 ];
 
 function onwarn(warning, warn) {
@@ -33,13 +33,10 @@ export default [{
       dir: "dist/",
       format: "esm",
       preserveModules: true,
-      preserveModulesRoot: "src",
       sourcemap: true,
     },
   ],
   plugins: [
-    resolve(),
-    commonjs(),
     typescript({
       tsconfig: "./tsconfig.json",
       declarationDir: "./dist/types",
@@ -81,8 +78,6 @@ export default [{
     },
   ],
   plugins: [
-    resolve(),
-    commonjs(),
     typescript({
       declaration: false,
       tsconfig: "./tsconfig.json",
