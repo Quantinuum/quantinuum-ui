@@ -11,7 +11,7 @@
       "shadcn/ui/*": ["./src/shadcn/ui/*"],
       "./": ["./*"],
     },
-    "target": "es2016",
+    "target": "es2018",
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -24,6 +24,7 @@
     "outDir": "dist",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
+    "importHelpers": false,
     "emitDeclarationOnly": true
   }
 }
