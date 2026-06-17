@@ -11,26 +11,9 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Building2,
 }
 interface MultiSelectContainerProps
-  extends Pick<
+  extends Omit<
     MultiSelectProps,
-    | "placeholder"
-    | "searchPlaceholder"
-    | "emptySearchMessage"
-    | "disabled"
-    | "className"
-    | "id"
-    | "label"
-    | "labelTooltip"
-    | "labelPosition"
-    | "errorMessage"
-    | "bottomMessage"
-    | "showChips"
-    | "isSearchVisible"
-    | "data-testid"
-    | "disabledTooltip"
-    | "clearAllText"
-    | "selectedLabel"
-    | "renderItem"
+    "value" | "onChange" | "items" | "isLoading" | "onSearchChange" | "labelIcon"
   > {
   labelIcon?: string
 }
