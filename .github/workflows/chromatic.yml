@@ -20,8 +20,6 @@ jobs:
 
       - name: Enable pnpm via corepack
         uses: pnpm/action-setup@v6
-        with:
-          version: 11
 
       - uses: actions/setup-node@v4
         with:
