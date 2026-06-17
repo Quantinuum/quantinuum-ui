@@ -18,14 +18,16 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Enable pnpm via corepack
+        uses: pnpm/action-setup@v6
+        with:
+          version: 11
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: "pnpm"
           cache-dependency-path: "pnpm-lock.yaml"
-
-      - name: Enable pnpm via corepack
-        run: corepack enable pnpm
 
       - run: pnpm i --frozen-lockfile
 
