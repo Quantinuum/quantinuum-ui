@@ -89,7 +89,7 @@ export const MultiSelectList = ({
                   value={option.value}
                   disabled={isDisabled}
                   onSelect={handleItemSelect}
-                  className="cursor-pointer hover:bg-muted data-[selected=true]:!bg-accent data-[selected=true]:text-accent-foreground rounded-none px-2"
+                  className="cursor-pointer data-[selected=true]:!bg-muted data-[selected=true]:text-accent-foreground rounded-none px-2 rounded-md m-1"
                   tabIndex={0}
                 >
                   <MultiSelectListItem
