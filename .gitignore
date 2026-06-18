@@ -6,3 +6,4 @@ node_modules
 storybook.log
 storybook-static
 debug-storybook.log
+package-lock.json
