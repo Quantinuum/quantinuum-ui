@@ -51,7 +51,7 @@ export const MultiSelectTrigger = forwardRef<HTMLButtonElement, MultiSelectTrigg
                 <Badge
                   key={item.value}
                   variant="secondary"
-                  className="min-w-[1.5rem] text-center px-2 text-xs"
+                  className="min-w-[1.5rem] bg-muted-accent text-center px-2 text-xs"
                   role="listitem"
                   aria-label={`Selected item: ${item.label}`}
                 >
@@ -61,7 +61,7 @@ export const MultiSelectTrigger = forwardRef<HTMLButtonElement, MultiSelectTrigg
             </>
           ) : (
             <>
-              <Badge variant="secondary" className="min-w-[1.5rem] text-center px-2 text-xs">
+              <Badge variant="secondary" className="min-w-[1.5rem] bg-muted-accent text-center px-2 text-xs">
                 {value.length} Selected
               </Badge>
             </>
