@@ -1,7 +1,9 @@
 allowBuilds:
-  esbuild: true
+  esbuild: false
   unrs-resolver: false
 minimumReleaseAge: 20160 # 14  days
 minimumReleaseAgeStrict: true
 trustPolicy: no-downgrade
 trustPolicyIgnoreAfter: 43200 # 30 days, See https://pnpm.io/settings#trustpolicyignoreafter
+trustPolicyExclude:
+  - "tinyexec@1.2.2"

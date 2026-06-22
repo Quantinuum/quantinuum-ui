@@ -52,8 +52,7 @@ const subscribeToTheme = (callback: (state: {isDark: boolean, mode: Mode}) => vo
 };
 
 export {
-  getTheme, 
+  getTheme,
   setTheme,
-  subscribeToTheme,
+  subscribeToTheme
 };
-

@@ -1,3 +1,4 @@
+export * from "./custom/multi-select";
 export * from "./custom/icons";
 export * from "./custom/slide-in";
 export * from "./custom/theme-selector";
@@ -38,4 +39,3 @@ export * from "./shadcn/ui/toggle-group";
 export * from "./shadcn/ui/tooltip";
 export * from "./tailwindTheme";
 export * from "./utils";
-

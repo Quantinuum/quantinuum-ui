@@ -1,6 +1,11 @@
 /* Visit https://aka.ms/tsconfig to read more about this file */
 {
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "dist"
+  ],
   "compilerOptions": {
     "paths": {
       "shadcn/ui/*": ["./src/shadcn/ui/*"],
@@ -15,6 +20,7 @@
     "module": "esnext",
     "declaration": true,
     "sourceMap": true,
+    "rootDir": "./src",
     "outDir": "dist",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,

@@ -1,5 +1,8 @@
 const config = {
-  stories: ["../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: [
+    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+  ],
 
   addons: [
     "@storybook/addon-links",
@@ -20,10 +23,9 @@ const config = {
   typescript: {
     reactDocgen: "react-docgen-typescript"
   },
-   previewBody: (body: any) => `
+  previewBody: (body: any) => `
     ${body}
-    ${
-       `<script
+    ${`<script
         src="syncTheme.js"
         type="application/javascript"
       ></script>`

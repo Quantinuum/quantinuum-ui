@@ -43,6 +43,7 @@ export const tailwindTheme = {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
+          accent: "hsl(var(--muted-accent))",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
