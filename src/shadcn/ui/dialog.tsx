@@ -1,8 +1,8 @@
 "use client"
 
-import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { Cross2Icon } from "@radix-ui/react-icons"
+import * as React from "react"
 
 import { cn } from "../../utils/cn"
 
@@ -16,7 +16,7 @@ const DialogClose = DialogPrimitive.Close
 
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
-  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>>(({className, ...props}, ref) => (
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>>(({ className, ...props }, ref) => (
     <>
       <DialogPrimitive.Overlay
         ref={ref}
@@ -30,7 +30,7 @@ const DialogOverlay = React.forwardRef<
         {...props}
       />
     </>
-))
+  ))
 DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
 
 const DialogContent = React.forwardRef<
@@ -40,11 +40,11 @@ const DialogContent = React.forwardRef<
     isBottomDialog?: boolean
   }
 >(({
-    className,
-    children,
-    isDismissable = true,
-    isBottomDialog = false,
-    ...props },
+  className,
+  children,
+  isDismissable = true,
+  isBottomDialog = false,
+  ...props },
   ref) => {
   const base = [
     "z-50",
@@ -76,7 +76,7 @@ const DialogContent = React.forwardRef<
 
   return (
     <DialogPortal>
-      <DialogOverlay/>
+      <DialogOverlay />
       <DialogPrimitive.Content
         ref={ref}
         className={cn(base, isBottomDialog ? bottomStyles : centerStyles, className)}
@@ -94,7 +94,7 @@ const DialogContent = React.forwardRef<
         {children}
 
         {isDismissable && (
-          <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+          <DialogPrimitive.Close className="absolute right-4 top-4 rounded-xs opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
             <Cross2Icon className="h-4 w-4" />
             <span className="sr-only">Close</span>
           </DialogPrimitive.Close>
@@ -161,14 +161,7 @@ const DialogDescription = React.forwardRef<
 DialogDescription.displayName = DialogPrimitive.Description.displayName
 
 export {
-  Dialog,
-  DialogPortal,
-  DialogOverlay,
-  DialogTrigger,
-  DialogClose,
-  DialogContent,
-  DialogHeader,
-  DialogFooter,
-  DialogTitle,
-  DialogDescription,
+  Dialog, DialogClose,
+  DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogOverlay, DialogPortal, DialogTitle, DialogTrigger
 }
+
