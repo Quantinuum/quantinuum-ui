@@ -34,6 +34,7 @@ const MultiSelect = forwardRef<HTMLButtonElement, MultiSelectProps>(
       clearAllText = "Clear All",
       selectedLabel,
       renderItem,
+      modal,
     },
     ref,
   ) => {
@@ -105,7 +106,7 @@ const MultiSelect = forwardRef<HTMLButtonElement, MultiSelectProps>(
         )}
 
         <div className={labelPosition === "left" ? "flex flex-col gap-1.5 flex-1" : "w-full"}>
-          <Popover open={open} onOpenChange={handleOpenChange}>
+          <Popover open={open} onOpenChange={handleOpenChange} modal={modal}>
             <PopoverTrigger asChild>
               <MultiSelectTrigger
                 ref={ref}
