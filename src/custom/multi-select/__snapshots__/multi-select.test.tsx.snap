@@ -12,7 +12,7 @@ exports[`MultiSelect > Props > should render as expected 1`] = `
     >
       <label
         class="text-sm font-medium leading-none text-muted-foreground"
-        for=":r0:"
+        for="_r_0_"
       >
         Team Members
       </label>
@@ -22,13 +22,12 @@ exports[`MultiSelect > Props > should render as expected 1`] = `
     class="w-full"
   >
     <button
-      aria-controls="radix-:r1:"
-      aria-describedby=":r0:-message"
+      aria-describedby="_r_0_-message"
       aria-expanded="false"
       aria-haspopup="dialog"
       class="flex min-h-9 w-full items-center gap-2 rounded-md border bg-transparent px-3 py-1.5 text-sm shadow-sm ring-offset-background hover:bg-muted focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 border-input"
       data-state="closed"
-      id=":r0:"
+      id="_r_0_"
       role="combobox"
       type="button"
     >
@@ -60,7 +59,7 @@ exports[`MultiSelect > Props > should render as expected 1`] = `
     </button>
     <p
       class="text-sm text-muted-foreground"
-      id=":r0:-message"
+      id="_r_0_-message"
     >
       Choose one or more
     </p>
