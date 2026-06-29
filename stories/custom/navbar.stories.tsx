@@ -2,13 +2,13 @@ import { IconJarLogoIcon } from "@radix-ui/react-icons";
 import { Meta, StoryObj } from "@storybook/react-vite";
 import React from "react";
 import {
-    Button, cn, Input,
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger, navigationMenuTriggerStyle
+  Button, cn, Input,
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger, navigationMenuTriggerStyle
 } from "../../src";
 
 const components: { title: string; href: string; description: string }[] = [
@@ -136,7 +136,7 @@ function NavigationDemo() {
 }
 
 const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
+  React.ComponentRef<"a">,
   React.ComponentPropsWithoutRef<"a">
 >(({ className, title, children, ...props }, ref) => {
   return (

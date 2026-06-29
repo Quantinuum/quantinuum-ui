@@ -1,6 +1,5 @@
 "use client"
-import * as LabelPrimitive from "@radix-ui/react-label";
-import { Slot } from "@radix-ui/react-slot";
+import { Label as LabelPrimitive, Slot as SlotPrimitive } from "radix-ui";
 import * as React from "react";
 import {
   Controller,
@@ -12,7 +11,7 @@ import {
 } from "react-hook-form";
 import { cn } from "../../utils/cn";
 import { Label } from "./label";
-
+const Slot = SlotPrimitive.Root;
 const Form = FormProvider;
 
 type FormFieldContextValue<
@@ -85,7 +84,7 @@ const FormItem = React.forwardRef<
 FormItem.displayName = "FormItem";
 
 const FormLabel = React.forwardRef<
-  React.ElementRef<typeof LabelPrimitive.Root>,
+  React.ComponentRef<typeof LabelPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
 >(({ className, ...props }, ref) => {
   const { error, formItemId } = useFormField();
@@ -102,7 +101,7 @@ const FormLabel = React.forwardRef<
 FormLabel.displayName = "FormLabel";
 
 const FormControl = React.forwardRef<
-  React.ElementRef<typeof Slot>,
+  React.ComponentRef<typeof Slot>,
   React.ComponentPropsWithoutRef<typeof Slot>
 >(({ ...props }, ref) => {
   const { error, formItemId, formDescriptionId, formMessageId } =
@@ -172,5 +171,6 @@ export {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage
 };
+
