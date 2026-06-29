@@ -6,4 +6,4 @@ minimumReleaseAgeStrict: true
 trustPolicy: no-downgrade
 trustPolicyIgnoreAfter: 43200 # 30 days, See https://pnpm.io/settings#trustpolicyignoreafter
 trustPolicyExclude:
-  - "tinyexec@1.2.2"
+  - 'tinyexec@1.2.2'
