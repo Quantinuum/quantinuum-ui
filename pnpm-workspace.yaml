@@ -7,3 +7,10 @@ trustPolicy: no-downgrade
 trustPolicyIgnoreAfter: 43200 # 30 days, See https://pnpm.io/settings#trustpolicyignoreafter
 trustPolicyExclude:
   - "tinyexec@1.2.2"
+minimumReleaseAgeExclude:
+  - esbuild@0.28.1
+  - ws@8.21.0
+  - vite@8.0.16
+  - js-yaml@4.1.2
+  - '@babel/core@7.29.1'
+  - undici@7.28.0
