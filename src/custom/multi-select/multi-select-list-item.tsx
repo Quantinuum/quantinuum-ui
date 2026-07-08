@@ -25,7 +25,7 @@ export const MultiSelectListItem = ({
         ) : (
           <>
             {item.icon && <item.icon className="h-4 w-4 text-muted-foreground shrink-0" />}
-            <span className="text-sm leading-5">{item.label}</span>
+            <span className="text-sm leading-5" style={{ overflowWrap: "anywhere" }}>{item.label}</span>
           </>
         )}
       </div>

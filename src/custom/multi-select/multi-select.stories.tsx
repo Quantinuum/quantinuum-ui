@@ -30,6 +30,7 @@ const mockUsers: MultiSelectItem[] = [
   { value: "user-8", label: "Hannah Montana" },
   { value: "user-9", label: "Ivan Drago" },
   { value: "user-10", label: "Julia Roberts" },
+  { value: "user-11", label: "96ece537-9c7d-58b0-8daf-8b94c90a5d18" },
 ]
 
 // Will take a string query i.e "Alice" and will return the mockUsers filtered but with a 500ms delay to simulate an API delay
