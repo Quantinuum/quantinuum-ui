@@ -1,0 +1,50 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Chip > should render a remove button when onRemove callback is provided 1`] = `
+<div
+  class="inline-flex items-center align-middle min-h-4 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px] bg-muted-accent text-foreground pl-1.5 pr-1 py-0.5"
+>
+  <div
+    class="truncate flex-1 max-w-[200px] text-xs font-medium leading-4 mr-1.5"
+  >
+    NexusUser1
+  </div>
+  <button
+    aria-label="Remove"
+    class="flex shrink-0 items-center justify-center aspect-square w-4 h-4 rounded-full opacity-70 outline-none transition-opacity hover:opacity-100 focus:outline-none focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-current hover:bg-muted hover:text-foreground p-1"
+    type="button"
+  >
+    <svg
+      class="lucide lucide-x h-3.5 w-3.5 shrink-0"
+      fill="none"
+      height="24"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 6 6 18"
+      />
+      <path
+        d="m6 6 12 12"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Chip > should render as expected 1`] = `
+<div
+  class="inline-flex items-center align-middle min-h-4 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px] bg-muted-accent text-foreground pl-1.5 pr-1 py-0.5"
+>
+  <div
+    class="truncate flex-1 max-w-[200px] text-xs font-medium leading-4 mr-1.5"
+  >
+    NexusUser1
+  </div>
+</div>
+`;
