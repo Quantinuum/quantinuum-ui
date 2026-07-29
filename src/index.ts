@@ -1,4 +1,5 @@
 export * from "./custom/multi-select";
+export * from "./custom/chip";
 export * from "./custom/icons";
 export * from "./custom/slide-in";
 export * from "./custom/theme-selector";
