@@ -16,9 +16,9 @@ const chipVariants = cva(
           "bg-primary text-primary-foreground",
       },
       size: {
-        sm: "pl-1.5 py-0",
-        md: "pl-1.5 py-0.5",
-        lg: "pl-2 py-1",
+        sm: "pl-1.5 pr-0.5 py-0",
+        md: "pl-1.5 pr-1 py-0.5",
+        lg: "pl-2 pr-1.5 py-1",
       },
     },
     defaultVariants: {
