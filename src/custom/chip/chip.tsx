@@ -16,9 +16,9 @@ const chipVariants = cva(
           "bg-primary text-primary-foreground",
       },
       size: {
-        sm: "pl-1.5 pr-px py-0",
-        md: "pl-1.5 pr-px py-0.5",
-        lg: "pl-2 pr-px py-1",
+        sm: "pl-1.5 py-0",
+        md: "pl-1.5 py-0.5",
+        lg: "pl-2 py-1",
       },
     },
     defaultVariants: {
@@ -39,8 +39,8 @@ const removeButtonVariants = cva(
       },
       size: {
         sm: "p-0.5",
-        md: "ml-1 p-1",
-        lg: "p-1",
+        md: "p-1",
+        lg: "p-1.5",
       },
     },
     defaultVariants: {
