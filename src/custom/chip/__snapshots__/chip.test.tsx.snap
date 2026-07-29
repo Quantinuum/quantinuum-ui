@@ -2,20 +2,20 @@
 
 exports[`Chip > should render a remove button when onRemove callback is provided 1`] = `
 <div
-  class="inline-flex items-center gap-1.5 rounded-full font-medium transition-colors focus-within:outline-none bg-muted-accent text-foreground px-1.5 py-0.5"
+  class="inline-flex items-center gap-1.5 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px] bg-muted-accent text-foreground pl-1.5 pr-px py-0.5"
 >
-  <span
-    class="truncate text-xs font-medium leading-4"
+  <div
+    class="truncate flex-1 max-w-[200px] text-xs font-medium"
   >
     NexusUser1
-  </span>
+  </div>
   <button
     aria-label="Remove"
-    class="flex shrink-0 items-center justify-center rounded-full opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-current"
+    class="flex shrink-0 items-center justify-center aspect-square w-4 h-4 rounded-full opacity-70 outline-none transition-opacity hover:opacity-100 focus:outline-none focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-current hover:bg-muted hover:text-foreground ml-1 p-1"
     type="button"
   >
     <svg
-      class="lucide lucide-x h-3 w-3"
+      class="lucide lucide-x h-3.5 w-3.5 shrink-0"
       fill="none"
       height="24"
       stroke="currentColor"
@@ -39,12 +39,12 @@ exports[`Chip > should render a remove button when onRemove callback is provided
 
 exports[`Chip > should render as expected 1`] = `
 <div
-  class="inline-flex items-center gap-1.5 rounded-full font-medium transition-colors focus-within:outline-none bg-muted-accent text-foreground px-1.5 py-0.5"
+  class="inline-flex items-center gap-1.5 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px] bg-muted-accent text-foreground pl-1.5 pr-px py-0.5"
 >
-  <span
-    class="truncate text-xs font-medium leading-4"
+  <div
+    class="truncate flex-1 max-w-[200px] text-xs font-medium"
   >
     NexusUser1
-  </span>
+  </div>
 </div>
 `;

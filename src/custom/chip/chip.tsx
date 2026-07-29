@@ -4,7 +4,7 @@ import type { ComponentPropsWithRef } from "react";
 import { cn } from "../../utils/cn";
 
 const chipVariants = cva(
-  "inline-flex items-center gap-1.5 rounded-full font-medium transition-colors focus-within:outline-none",
+  "inline-flex items-center gap-1.5 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px]",
   {
     variants: {
       variant: {
@@ -16,9 +16,31 @@ const chipVariants = cva(
           "bg-primary text-primary-foreground",
       },
       size: {
-        sm: "px-1.5 py-0",
-        md: "px-1.5 py-0.5",
-        lg: "px-2 py-1",
+        sm: "pl-1.5 pr-px py-0",
+        md: "pl-1.5 pr-px py-0.5",
+        lg: "pl-2 pr-px py-1",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "md",
+    },
+  },
+);
+
+const removeButtonVariants = cva(
+  "flex shrink-0 items-center justify-center aspect-square w-4 h-4 rounded-full opacity-70 outline-none transition-opacity hover:opacity-100 focus:outline-none focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-current",
+  {
+    variants: {
+      variant: {
+        default: "hover:bg-muted hover:text-foreground",
+        muted: "hover:bg-muted-accent hover:text-foreground",
+        primary: "hover:bg-primary-foreground hover:text-primary",
+      },
+      size: {
+        sm: "p-0.5",
+        md: "ml-1 p-1",
+        lg: "p-1",
       },
     },
     defaultVariants: {
@@ -52,15 +74,15 @@ const Chip = ({
       className={cn(chipVariants({ variant, size }), className)}
       {...props}
     >
-      <span className="truncate text-xs font-medium leading-4">{children}</span>
+      <div className="truncate flex-1 max-w-[200px] text-xs font-medium">{children}</div>
       {onRemove && (
         <button
           type="button"
           onClick={onRemove}
           aria-label={removeAriaLabel ?? "Remove"}
-          className="flex shrink-0 items-center justify-center rounded-full opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-current"
+          className={removeButtonVariants({ variant, size })}
         >
-          <X className="h-3 w-3" />
+          <X className="h-3.5 w-3.5 shrink-0" />
         </button>
       )}
     </div>
