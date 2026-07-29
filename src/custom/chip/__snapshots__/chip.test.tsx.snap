@@ -2,10 +2,10 @@
 
 exports[`Chip > should render a remove button when onRemove callback is provided 1`] = `
 <div
-  class="inline-flex items-center gap-1.5 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px] bg-muted-accent text-foreground pl-1.5 pr-1 py-0.5"
+  class="inline-flex items-center align-middle min-h-4 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px] bg-muted-accent text-foreground pl-1.5 pr-1 py-0.5"
 >
   <div
-    class="truncate flex-1 max-w-[200px] text-xs font-medium"
+    class="truncate flex-1 max-w-[200px] text-xs font-medium leading-4 mr-1.5"
   >
     NexusUser1
   </div>
@@ -39,10 +39,10 @@ exports[`Chip > should render a remove button when onRemove callback is provided
 
 exports[`Chip > should render as expected 1`] = `
 <div
-  class="inline-flex items-center gap-1.5 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px] bg-muted-accent text-foreground pl-1.5 pr-1 py-0.5"
+  class="inline-flex items-center align-middle min-h-4 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px] bg-muted-accent text-foreground pl-1.5 pr-1 py-0.5"
 >
   <div
-    class="truncate flex-1 max-w-[200px] text-xs font-medium"
+    class="truncate flex-1 max-w-[200px] text-xs font-medium leading-4 mr-1.5"
   >
     NexusUser1
   </div>

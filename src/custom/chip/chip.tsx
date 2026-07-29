@@ -4,7 +4,7 @@ import type { ComponentPropsWithRef } from "react";
 import { cn } from "../../utils/cn";
 
 const chipVariants = cva(
-  "inline-flex items-center gap-1.5 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px]",
+  "inline-flex items-center align-middle min-h-4 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px]",
   {
     variants: {
       variant: {
@@ -20,10 +20,20 @@ const chipVariants = cva(
         md: "pl-1.5 pr-1 py-0.5",
         lg: "pl-2 pr-1.5 py-1",
       },
+      hasContent: {
+        true: "",
+        false: "",
+      },
     },
+    compoundVariants: [
+      { size: "sm", hasContent: false, class: "p-0" },
+      { size: "md", hasContent: false, class: "p-0.5" },
+      { size: "lg", hasContent: false, class: "p-1" },
+    ],
     defaultVariants: {
       variant: "default",
       size: "md",
+      hasContent: true,
     },
   },
 );
@@ -42,10 +52,19 @@ const removeButtonVariants = cva(
         md: "p-1",
         lg: "p-1.5",
       },
+      hasContent: {
+        true: "",
+        false: "",
+      },
     },
+    compoundVariants: [
+      { size: "sm", hasContent: false, class: "p-0" },
+      { size: "md", hasContent: false, class: "p-1" },
+    ],
     defaultVariants: {
       variant: "default",
       size: "md",
+      hasContent: true,
     },
   },
 );
@@ -53,7 +72,7 @@ const removeButtonVariants = cva(
 export interface ChipProps
   extends Omit<ComponentPropsWithRef<"div">, "onClick" | "children">,
     VariantProps<typeof chipVariants> {
-  children: string | number;
+  children?: string | number;
   onRemove?: () => void;
   removeAriaLabel?: string;
 }
@@ -68,19 +87,23 @@ const Chip = ({
   ref,
   ...props
 }: ChipProps) => {
+  const hasContent = children != null && children !== "";
+
   return (
     <div
       ref={ref}
-      className={cn(chipVariants({ variant, size }), className)}
+      className={cn(chipVariants({ variant, size, hasContent }), className)}
       {...props}
     >
-      <div className="truncate flex-1 max-w-[200px] text-xs font-medium">{children}</div>
+      {hasContent && (
+        <div className="truncate flex-1 max-w-[200px] text-xs font-medium leading-4 mr-1.5">{children}</div>
+      )}
       {onRemove && (
         <button
           type="button"
           onClick={onRemove}
           aria-label={removeAriaLabel ?? "Remove"}
-          className={removeButtonVariants({ variant, size })}
+          className={removeButtonVariants({ variant, size, hasContent })}
         >
           <X className="h-3.5 w-3.5 shrink-0" />
         </button>
