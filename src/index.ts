@@ -1,6 +1,8 @@
-export * from "./custom/multi-select";
+
 export * from "./custom/chip";
+export * from "./custom/filter-chip";
 export * from "./custom/icons";
+export * from "./custom/multi-select";
 export * from "./custom/slide-in";
 export * from "./custom/theme-selector";
 export * from "./shadcn/ui/accordion";
