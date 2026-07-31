@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Chip } from "../../src";
+import { Chip } from "src";
 
 const meta: Meta<typeof Chip> = {
   title: "Custom/Chip",

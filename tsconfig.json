@@ -9,6 +9,8 @@
   "compilerOptions": {
     "paths": {
       "shadcn/ui/*": ["./src/shadcn/ui/*"],
+      "src": ["./src/index.ts"],
+      "src/*": ["./src/*"],
       "./": ["./*"],
     },
     "target": "es2018",
