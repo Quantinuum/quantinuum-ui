@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite"
 import { useState } from "react"
 import { Users, Building2 } from "lucide-react"
 import { TooltipProvider } from "../../shadcn/ui/tooltip"
-import { MultiSelect } from "../.."
+import { MultiSelect } from "src"
 import type { MultiSelectItem, MultiSelectProps } from "./types"
 
 // Icon mapping for label icons
