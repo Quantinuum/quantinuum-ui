@@ -45,7 +45,19 @@ describe("FilterChip", () => {
     expect(onRemove).toHaveBeenCalledTimes(1);
     expect(onRemove).toHaveBeenCalledWith("NexusUser2");
   });
+
+  it("should forward component props to the root element", () => {
+    render(
+      <FilterChip
+        label="Username"
+        items={items}
+        className="custom-class"
+        data-testid="username-filter"
+      />,
+    );
+
+    const rootElement = screen.getByTestId("username-filter");
+    expect(rootElement).toBeInTheDocument();
+    expect(rootElement).toHaveClass("custom-class");
+  });
 });
-function matchSnapshot() {
-  throw new Error('Function not implemented.');
-}
