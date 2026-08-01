@@ -29,7 +29,7 @@ type Story = StoryObj<typeof FilterChip>;
 
 export const Default: Story = {
   render: (args) => {
-    const [items, setItems] = useState<string[]>(args.items);
+    const [items, setItems] = useState(args.items);
     if (items.length === 0) {
       return (
         <div className="text-muted-foreground text-sm">
