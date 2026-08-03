@@ -1,0 +1,31 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FilterChip > should render as expected 1`] = `
+<div
+  class="inline-flex items-center px-3 py-1.5 gap-1.5 rounded-2xl border border-border"
+>
+  <div
+    class="text-foreground text-xs font-normal"
+  >
+    Username
+  </div>
+  <div
+    class="inline-flex items-center align-middle min-h-4 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px] bg-muted-accent text-foreground pl-1.5 pr-1 py-0.5"
+  >
+    <div
+      class="truncate flex-1 max-w-[200px] text-xs font-medium leading-4 mr-1.5"
+    >
+      NexusUser1
+    </div>
+  </div>
+  <div
+    class="inline-flex items-center align-middle min-h-4 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px] bg-muted-accent text-foreground pl-1.5 pr-1 py-0.5"
+  >
+    <div
+      class="truncate flex-1 max-w-[200px] text-xs font-medium leading-4 mr-1.5"
+    >
+      NexusUser2
+    </div>
+  </div>
+</div>
+`;
