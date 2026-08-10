@@ -26,7 +26,7 @@ const FilterChip = ({
   return (
     <div
       className={cn(
-        "inline-flex items-center px-3 py-1.5 gap-1.5 rounded-2xl border border-border",
+        "inline-flex items-center px-3 py-1.5 gap-1.5 rounded-2xl border border-border flex-wrap",
         className,
       )}
       {...props}
