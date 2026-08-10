@@ -2,7 +2,7 @@
 
 exports[`FilterChip > should render as expected 1`] = `
 <div
-  class="inline-flex items-center px-3 py-1.5 gap-1.5 rounded-2xl border border-border"
+  class="inline-flex items-center px-3 py-1.5 gap-1.5 rounded-2xl border border-border flex-wrap"
 >
   <div
     class="text-foreground text-xs font-normal"
