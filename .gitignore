@@ -7,3 +7,4 @@ storybook.log
 storybook-static
 debug-storybook.log
 package-lock.json
+.tailwind-migration/
