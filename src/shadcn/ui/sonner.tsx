@@ -13,7 +13,7 @@ const SonnerToast = ({ ...props }: ToasterProps) => {
           toast:
             "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",
           content: "w-[calc(100%-1.2rem)]",
-          description: "group-[.toast]:text-muted-foreground max-h-[40vh] overflow-y-auto",
+          description: "group-[.toast]:data-[description]:text-muted-foreground max-h-[40vh] overflow-y-auto",
           actionButton:
             "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
           cancelButton:
