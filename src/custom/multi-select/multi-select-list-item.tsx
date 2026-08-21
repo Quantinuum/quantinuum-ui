@@ -12,7 +12,7 @@ export const MultiSelectListItem = ({
   renderItem,
 }: MultiSelectListItemProps) => {
   const itemContent = (
-    <div className={cn("flex items-start gap-2 w-full", isDisabled && "opacity-50 cursor-not-allowed")}>
+    <div className={cn("flex items-start gap-2 w-full", isDisabled && "cursor-not-allowed")}>
       <Checkbox
         checked={isSelected}
         disabled={isDisabled}
