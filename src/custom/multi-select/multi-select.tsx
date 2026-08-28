@@ -94,7 +94,7 @@ const MultiSelect = forwardRef<HTMLButtonElement, MultiSelectProps>(
     return (
       <div className={labelPosition === "left" ? "flex items-start gap-3 min-w-52 max-w-3xl w-full" : "flex flex-col gap-1.5 min-w-52 max-w-3xl w-full"}>
         {label && (
-          <div className={labelPosition === "left" ? "shrink-0 min-h-9 flex items-center" : ""}>
+          <div className={labelPosition === "left" ? "shrink-0 min-h-9 flex items-center ml-0 mr-auto" : ""}>
             <MultiSelectLabel
               htmlFor={id}
               label={label}
@@ -105,7 +105,7 @@ const MultiSelect = forwardRef<HTMLButtonElement, MultiSelectProps>(
           </div>
         )}
 
-        <div className={labelPosition === "left" ? "flex flex-col gap-1.5 flex-1" : "w-full"}>
+        <div className={labelPosition === "left" ? "flex flex-col gap-1.5" : "w-full"}>
           <Popover open={open} onOpenChange={handleOpenChange} modal={modal}>
             <PopoverTrigger asChild>
               <MultiSelectTrigger
