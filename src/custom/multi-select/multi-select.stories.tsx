@@ -60,7 +60,7 @@ const MultiSelectContainer = ({ labelIcon, ...props }: MultiSelectContainerProps
   }
 
   return (
-    <div className="w-[600px]">
+    <div className="w-[550px]">
       <MultiSelect
         {...props}
         value={selectedItems}
