@@ -14,7 +14,7 @@ export function CalendarDemo() {
       mode="range"
       selected={dateRange}
       onSelect={setDateRange}
-      className="rounded-md border shadow"
+      className="rounded-md border shadow-sm"
     />
   );
 }
