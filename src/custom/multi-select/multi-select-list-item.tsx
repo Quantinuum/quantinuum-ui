@@ -12,7 +12,7 @@ export const MultiSelectListItem = ({
   renderItem,
 }: MultiSelectListItemProps) => {
   const itemContent = (
-    <div className={cn("flex items-start gap-2 w-full", isDisabled && "opacity-50 cursor-not-allowed")}>
+    <div className={cn("flex items-start gap-2 w-full", isDisabled && "cursor-not-allowed")}>
       <Checkbox
         checked={isSelected}
         disabled={isDisabled}
@@ -25,7 +25,7 @@ export const MultiSelectListItem = ({
         ) : (
           <>
             {item.icon && <item.icon className="h-4 w-4 text-muted-foreground shrink-0" />}
-            <span className="text-sm leading-5">{item.label}</span>
+            <span className="text-sm leading-5" style={{ overflowWrap: "anywhere" }}>{item.label}</span>
           </>
         )}
       </div>

@@ -37,7 +37,8 @@ export const MultiSelectList = ({
     [items, onSelect],
   )
 
-  const isEmptyMessageVisible = !isLoading && inputValue.length > 0 && items.length === 0
+  const isSearchingWithNoResults = inputValue.length > 0 && items.length === 0
+  const isEmptyMessageVisible = !isLoading && isSearchingWithNoResults
 
   const getScreenReaderAnnouncement = () => {
     if (isLoading) {
@@ -106,7 +107,7 @@ export const MultiSelectList = ({
         )}
 
         {/* Clear all */}
-        {value.length > 0 && (
+        {value.length > 0 && !isSearchingWithNoResults && (
           <>
             <CommandSeparator />
             <CommandGroup className="p-0">

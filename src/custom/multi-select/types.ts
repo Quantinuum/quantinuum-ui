@@ -33,6 +33,7 @@ export interface MultiSelectProps {
   clearAllText?: string
   selectedLabel?: string
   renderItem?: (item: MultiSelectItem) => React.ReactNode
+  modal?: boolean
 }
 
 export interface MultiSelectLabelProps {

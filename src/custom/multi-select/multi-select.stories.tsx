@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite"
 import { useState } from "react"
 import { Users, Building2 } from "lucide-react"
 import { TooltipProvider } from "../../shadcn/ui/tooltip"
-import { MultiSelect } from "../.."
+import { MultiSelect } from "src"
 import type { MultiSelectItem, MultiSelectProps } from "./types"
 
 // Icon mapping for label icons
@@ -30,6 +30,7 @@ const mockUsers: MultiSelectItem[] = [
   { value: "user-8", label: "Hannah Montana" },
   { value: "user-9", label: "Ivan Drago" },
   { value: "user-10", label: "Julia Roberts" },
+  { value: "user-11", label: "96ece537-9c7d-58b0-8daf-8b94c90a5d18" },
 ]
 
 // Will take a string query i.e "Alice" and will return the mockUsers filtered but with a 500ms delay to simulate an API delay
@@ -59,15 +60,18 @@ const MultiSelectContainer = ({ labelIcon, ...props }: MultiSelectContainerProps
   }
 
   return (
-    <MultiSelect
-      {...props}
-      value={selectedItems}
-      items={items}
-      isLoading={isLoading}
-      onChange={setSelectedItems}
-      onSearchChange={handleSearchChange}
-      labelIcon={labelIcon ? iconMap[labelIcon] : undefined}
-    />
+    <div className="w-[550px]">
+      <MultiSelect
+        {...props}
+        value={selectedItems}
+        items={items}
+        className="w-[300px]"
+        isLoading={isLoading}
+        onChange={setSelectedItems}
+        onSearchChange={handleSearchChange}
+        labelIcon={labelIcon ? iconMap[labelIcon] : undefined}
+      />
+    </div>
   )
 }
 
@@ -161,7 +165,7 @@ export const FormIntegration: Story = {
     disabledTooltip: "Item disabled for reason",
   },
 
-  render: () => {
+  render: ({ disabledTooltip }) => {
     const [projectName, setProjectName] = useState("")
     const [selectedUsers, setSelectedUsers] = useState<MultiSelectItem[]>([])
     const [userError, setUserError] = useState<string | undefined>()
@@ -200,6 +204,7 @@ export const FormIntegration: Story = {
           label="Assignees"
           labelIcon={Users}
           labelTooltip="Select team members to assign"
+          disabledTooltip={disabledTooltip}
           errorMessage={userError}
           placeholder="Select users..."
           onChange={(users) => {
