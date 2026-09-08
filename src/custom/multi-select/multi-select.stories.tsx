@@ -60,15 +60,18 @@ const MultiSelectContainer = ({ labelIcon, ...props }: MultiSelectContainerProps
   }
 
   return (
-    <MultiSelect
-      {...props}
-      value={selectedItems}
-      items={items}
-      isLoading={isLoading}
-      onChange={setSelectedItems}
-      onSearchChange={handleSearchChange}
-      labelIcon={labelIcon ? iconMap[labelIcon] : undefined}
-    />
+    <div className="w-[550px]">
+      <MultiSelect
+        {...props}
+        value={selectedItems}
+        items={items}
+        className="w-[300px]"
+        isLoading={isLoading}
+        onChange={setSelectedItems}
+        onSearchChange={handleSearchChange}
+        labelIcon={labelIcon ? iconMap[labelIcon] : undefined}
+      />
+    </div>
   )
 }
 
@@ -162,7 +165,7 @@ export const FormIntegration: Story = {
     disabledTooltip: "Item disabled for reason",
   },
 
-  render: () => {
+  render: ({ disabledTooltip }) => {
     const [projectName, setProjectName] = useState("")
     const [selectedUsers, setSelectedUsers] = useState<MultiSelectItem[]>([])
     const [userError, setUserError] = useState<string | undefined>()
@@ -201,6 +204,7 @@ export const FormIntegration: Story = {
           label="Assignees"
           labelIcon={Users}
           labelTooltip="Select team members to assign"
+          disabledTooltip={disabledTooltip}
           errorMessage={userError}
           placeholder="Select users..."
           onChange={(users) => {
