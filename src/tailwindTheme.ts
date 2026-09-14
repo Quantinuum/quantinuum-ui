@@ -4,6 +4,15 @@ import type { Config } from 'tailwindcss'
 export const tailwindTheme = {
   darkMode: ['class', '[data-theme="dark"]'],
   theme: {
+    // Still honoured by v4 through the `@config` compatibility layer; a CSS-first
+    // config would need `@utility container` instead.
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        'large-laptop': '1400px', // Above 1400px wide screens set containers to have a max-width of 1400px
+      },
+    },
     screens: {
       // Overriding default breakpoints - We want to replace rather than extend - all the breakpoints must be clearly defined here
       xs: '375px',

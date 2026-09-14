@@ -1,4 +1,6 @@
-@import 'tailwindcss';
+/* source(none) disables v4 automatic source detection, which scans the whole
+   package root; the content globs in tailwind.config.ts are the source of truth. */
+@import 'tailwindcss' source(none);
 @config "../tailwind.config.ts";
 
 @layer base {

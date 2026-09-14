@@ -4,7 +4,7 @@ import type { ComponentPropsWithRef } from "react";
 import { cn } from "../../utils/cn";
 
 const chipVariants = cva(
-  "inline-flex items-center align-middle min-h-4 rounded-xl font-medium transition-colors focus-within:outline-none max-w-[240px]",
+  "inline-flex items-center align-middle min-h-4 rounded-xl font-medium transition-colors focus-within:outline-hidden max-w-[240px]",
   {
     variants: {
       variant: {
@@ -39,7 +39,7 @@ const chipVariants = cva(
 );
 
 const removeButtonVariants = cva(
-  "flex shrink-0 items-center justify-center aspect-square w-4 h-4 rounded-full opacity-70 outline-none transition-opacity hover:opacity-100 focus:outline-none focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-current",
+  "flex shrink-0 items-center justify-center aspect-square w-4 h-4 rounded-full opacity-70 outline-hidden transition-opacity hover:opacity-100 focus:outline-hidden focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-current",
   {
     variants: {
       variant: {
