@@ -65,3 +65,11 @@
   --input: 240 3.7% 26.9%;
   --ring: 240 4.9% 83.9%;
 }
+
+/* Tailwind v4 dropped Preflight's `button { cursor: pointer }`; restore it. */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
