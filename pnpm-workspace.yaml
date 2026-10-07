@@ -41,3 +41,6 @@ minimumReleaseAgeExclude:
   - braces@3.0.4
   - source-map-js@1.2.2
   - postcss-selector-parser@7.1.6
+overrides:
+  braces@<=3.0.3: ^3.0.4
+  postcss-selector-parser@<7.1.6: ^7.1.6
