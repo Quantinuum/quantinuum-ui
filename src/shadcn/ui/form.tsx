@@ -69,6 +69,11 @@ const FormItemContext = React.createContext<FormItemContextValue>(
   {} as FormItemContextValue
 );
 
+// Tailwind v3 space-y-2 semantics (top margin on non-first children), so inline labels keep their gap in v4.
+// Keyed on .space-y-2 so a consumer space-y-* override (resolved by tailwind-merge) still replaces it.
+const formItemSpacing =
+  "space-y-2 [&.space-y-2]:*:not-first:mt-2 [&.space-y-2]:*:not-first:mb-0 [:where(&.space-y-2>:first-child)]:mb-0";
+
 const FormItem = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -77,7 +82,7 @@ const FormItem = React.forwardRef<
 
   return (
     <FormItemContext.Provider value={{ id }}>
-      <div ref={ref} className={cn("space-y-2", className)} {...props} />
+      <div ref={ref} className={cn(formItemSpacing, className)} {...props} />
     </FormItemContext.Provider>
   );
 });
