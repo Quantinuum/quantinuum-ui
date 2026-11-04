@@ -87,10 +87,10 @@
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-scss": "^3.0.0",
     "semantic-release": "^24.2.9",
-    "storybook": "^10.4.0",
+    "storybook": "^10.6.3",
     "tailwindcss": "^3.4.19",
     "typescript": "^6.0.3",
-    "vite": "^8.0.16",
+    "vite": "^8.3.5",
     "vitest": "^4.1.11"
   },
   "dependencies": {
