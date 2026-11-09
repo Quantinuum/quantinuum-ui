@@ -59,6 +59,7 @@
     "@storybook/addon-links": "^10.4.0",
     "@storybook/addon-onboarding": "^10.4.0",
     "@storybook/react-vite": "^10.4.0",
+    "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/typography": "^0.5.20",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
@@ -75,6 +76,7 @@
     "eslint-plugin-storybook": "10.3.5",
     "husky": "^9.1.7",
     "jsdom": "^29.1.1",
+    "lucide-react": "^0.468.0",
     "postcss": "^8.5.28",
     "prop-types": "^15.8.1",
     "react": "^19.2.7",
@@ -88,10 +90,11 @@
     "rollup-plugin-scss": "^3.0.0",
     "semantic-release": "^24.2.9",
     "storybook": "^10.6.3",
-    "tailwindcss": "^3.4.19",
+    "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
     "vite": "^8.3.5",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.11",
+    "zod": "^3.25.56"
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.2",
@@ -102,18 +105,17 @@
     "radix-ui": "^1.5.0",
     "react-day-picker": "^8.10.2",
     "sonner": "^2.0.7",
-    "tailwind-merge": "^2.6.1"
+    "tailwind-merge": "^3.6.0"
   },
   "peerDependencies": {
     "@hookform/resolvers": "^3.9.0",
     "@tailwindcss/typography": "^0.5.20",
     "@tanstack/react-table": "^8.11.0",
-    "lucide-react": "^0.468.0",
+    "lucide-react": "^0.468.0 || ^1.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.50.1",
     "react-icons": "^5.3.0",
-    "tailwindcss": "^3.4.15",
-    "zod": "^3.25.56"
+    "tailwindcss": "^4.0.0"
   }
 }

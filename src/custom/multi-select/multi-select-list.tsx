@@ -1,5 +1,5 @@
 import { Command as CommandPrimitive } from "cmdk"
-import { Loader2, Search } from "lucide-react"
+import { LoaderCircle, Search } from "lucide-react"
 import { useCallback, useMemo } from "react"
 import { Command, CommandEmpty, CommandGroup, CommandItem, CommandList, CommandSeparator } from "../../shadcn/ui/command"
 import { cn } from "../../utils/cn"
@@ -66,10 +66,10 @@ export const MultiSelectList = ({
             value={inputValue}
             onValueChange={onSearchInputChange}
             placeholder={searchPlaceholder}
-            className="flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
+            className="flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-hidden placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
           />
 
-          {isLoading && <Loader2 className="h-4 w-4 shrink-0 animate-spin opacity-50" />}
+          {isLoading && <LoaderCircle className="h-4 w-4 shrink-0 animate-spin opacity-50" />}
         </div>
       )}
 

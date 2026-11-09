@@ -5,7 +5,7 @@
   "tsx": true,
   "tailwind": {
     "config": "tailwind.config.ts",
-    "css": "src/globals.css",
+    "css": ".storybook/styles.css",
     "baseColor": "zinc",
     "cssVariables": true
   },

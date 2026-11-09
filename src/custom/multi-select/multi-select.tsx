@@ -125,7 +125,7 @@ const MultiSelect = forwardRef<HTMLButtonElement, MultiSelectProps>(
               />
             </PopoverTrigger>
 
-            <PopoverContent className="w-[--radix-popover-trigger-width] p-0" align="start">
+            <PopoverContent className="w-(--radix-popover-trigger-width) p-0" align="start">
               <MultiSelectList
                 inputValue={inputValue}
                 isLoading={isLoading}

@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronUp, Loader2 } from "lucide-react"
+import { ChevronDown, ChevronUp, LoaderCircle } from "lucide-react"
 import { forwardRef } from "react"
 import { Badge } from "../../shadcn/ui/badge"
 import { cn } from "../../utils/cn"
@@ -26,9 +26,9 @@ export const MultiSelectTrigger = forwardRef<HTMLButtonElement, MultiSelectTrigg
       aria-invalid={hasError || undefined}
       aria-busy={isLoading || undefined}
       className={cn(
-        "flex min-h-9 w-full items-center gap-2 rounded-md border bg-transparent px-3 py-1.5 text-sm shadow-sm ring-offset-background",
+        "flex min-h-9 w-full items-center gap-2 rounded-md border bg-transparent px-3 py-1.5 text-sm shadow-xs ring-offset-background",
         "hover:bg-muted",
-        "focus:outline-none focus:ring-1 focus:ring-ring",
+        "focus:outline-hidden focus:ring-1 focus:ring-ring",
         "disabled:cursor-not-allowed disabled:opacity-50",
         hasError ? "border-destructive" : "border-input",
         value.length > 0 && "flex-wrap h-auto",
@@ -71,7 +71,7 @@ export const MultiSelectTrigger = forwardRef<HTMLButtonElement, MultiSelectTrigg
 
       <div className="ml-auto shrink-0">
         {isLoading ? (
-          <Loader2 className="h-4 w-4 animate-spin opacity-50" />
+          <LoaderCircle className="h-4 w-4 animate-spin opacity-50" />
         ) : open ? (
           <ChevronUp className="h-4 w-4 opacity-50" />
         ) : (
