@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronUp, Loader2 } from "lucide-react"
+import { ChevronDown, ChevronUp, LoaderCircle } from "lucide-react"
 import { forwardRef } from "react"
 import { Badge } from "../../shadcn/ui/badge"
 import { cn } from "../../utils/cn"
@@ -71,7 +71,7 @@ export const MultiSelectTrigger = forwardRef<HTMLButtonElement, MultiSelectTrigg
 
       <div className="ml-auto shrink-0">
         {isLoading ? (
-          <Loader2 className="h-4 w-4 animate-spin opacity-50" />
+          <LoaderCircle className="h-4 w-4 animate-spin opacity-50" />
         ) : open ? (
           <ChevronUp className="h-4 w-4 opacity-50" />
         ) : (

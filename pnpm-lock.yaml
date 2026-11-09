@@ -29,9 +29,6 @@ importers:
       input-otp:
         specifier: ^1.4.1
         version: 1.4.2(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      lucide-react:
-        specifier: ^0.468.0
-        version: 0.468.0(react@19.2.7)
       radix-ui:
         specifier: ^1.5.0
         version: 1.5.0(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -50,9 +47,6 @@ importers:
       tailwind-merge:
         specifier: ^3.6.0
         version: 3.6.0
-      zod:
-        specifier: ^3.25.56
-        version: 3.25.76
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^5.1.2
@@ -132,6 +126,9 @@ importers:
       jsdom:
         specifier: ^29.1.1
         version: 29.1.1
+      lucide-react:
+        specifier: ^0.468.0
+        version: 0.468.0(react@19.2.7)
       postcss:
         specifier: ^8.4.32
         version: 8.5.15
@@ -183,6 +180,9 @@ importers:
       vitest:
         specifier: ^4.1.7
         version: 4.1.7(@types/node@25.5.0)(jsdom@29.1.1)(vite@8.0.16(@types/node@25.5.0)(esbuild@0.27.2)(jiti@2.7.0))
+      zod:
+        specifier: ^3.25.56
+        version: 3.25.76
 
 packages:
 
