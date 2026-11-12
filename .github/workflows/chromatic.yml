@@ -18,12 +18,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Enable pnpm via corepack
+      - name: Set up pnpm
         uses: pnpm/action-setup@v6
 
       - uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version: 26
           cache: "pnpm"
           cache-dependency-path: "pnpm-lock.yaml"
 

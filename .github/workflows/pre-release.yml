@@ -15,13 +15,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
       - name: Set up node
         uses: actions/setup-node@v7
         with:
-          node-version: 24
-
-      - name: Enable pnpm via corepack
-        run: corepack enable pnpm
+          node-version: 26
 
       - run: pnpm i --frozen-lockfile
       - run: pnpm run lint
